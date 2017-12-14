@@ -1,0 +1,18 @@
+[submodule "pack/bundle/start/ack.vim"]
+	path = pack/bundle/start/ack.vim
+	url = https://github.com/mileszs/ack.vim.git
+[submodule "pack/bundle/start/ctrlp.vim"]
+	path = pack/bundle/start/ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim.git
+[submodule "pack/bundle/start/vim-highlighturl"]
+	path = pack/bundle/start/vim-highlighturl
+	url = https://github.com/itchyny/vim-highlighturl.git
+[submodule "pack/bundle/start/vim-numbertoggle"]
+	path = pack/bundle/start/vim-numbertoggle
+	url = https://github.com/jeffkreeftmeijer/vim-numbertoggle.git
+[submodule "pack/bundle/start/vim-better-whitespace"]
+	path = pack/bundle/start/vim-better-whitespace
+	url = https://github.com/ntpeters/vim-better-whitespace.git
+[submodule "pack/bundle/start/vim-sensible"]
+	path = pack/bundle/start/vim-sensible
+	url = https://github.com/tpope/vim-sensible.git
