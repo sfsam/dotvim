@@ -16,3 +16,6 @@
 [submodule "pack/bundle/start/vim-sensible"]
 	path = pack/bundle/start/vim-sensible
 	url = https://github.com/tpope/vim-sensible.git
+[submodule "pack/bundle/start/vim-tabular"]
+	path = pack/bundle/start/vim-tabular
+	url = https://github.com/godlygeek/tabular.git
