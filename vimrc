@@ -48,6 +48,7 @@ let g:highlighturl_underline = 'NONE'
 "FileType-specific indentation
 autocmd FileType c setlocal ts=4 sts=4 sw=4
 autocmd FileType python setlocal ts=4 sts=4 sw=4
+autocmd FileType html setlocal ts=2 sts=2 sw=2
 autocmd FileType javascript setlocal ts=2 sts=2 sw=2
 
 set stl=\ %-3.3n\                  "buffer number
