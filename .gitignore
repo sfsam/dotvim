@@ -2,3 +2,5 @@ undo/*
 swap/*
 .netrwhist
 viminfo
+viminfo.tmp.*
+
