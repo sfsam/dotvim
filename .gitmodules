@@ -19,3 +19,6 @@
 [submodule "pack/bundle/start/vim-tabular"]
 	path = pack/bundle/start/vim-tabular
 	url = https://github.com/godlygeek/tabular.git
+[submodule "pack/bundle/start/vim-bullets"]
+	path = pack/bundle/start/vim-bullets
+	url = https://github.com/dkarter/bullets.vim.git
