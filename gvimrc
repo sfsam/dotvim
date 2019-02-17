@@ -1,3 +1,11 @@
+set guifont=Source\ Code\ Pro:h14
+set lines=30
+set t_Co=256
+colorscheme Xcode
+
+"URL highlight color
+let g:highlighturl_guifg = "#116cd6"
+
 "customize PaperColor colorscheme
 let g:PaperColor_Theme_Options = {
   \   'theme': {
@@ -10,10 +18,6 @@ let g:PaperColor_Theme_Options = {
   \     }
   \   }
   \ }
-
-set guifont=Source\ Code\ Pro:h14
-set lines=30
-set t_Co=256
-set background=light
-colorscheme PaperColor
+"set background=light
+"colorscheme PaperColor
 
