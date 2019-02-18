@@ -27,6 +27,9 @@ inoremap jk <esc>
 nnoremap ,d "=strftime('%Y-%m-%d')<CR>P
 inoremap ,d <C-R>=strftime('%Y-%m-%d')<CR>
 
+"shortcut to clear search highlights
+nnoremap <esc><esc> :noh<return>
+
 "default indentation
 set smartindent
 set expandtab     "expand tabs to spaces
