@@ -7,7 +7,7 @@ set ignorecase        "ignore case when searching
 set hidden            "allow hiding buffers which have modifications
 set linebreak         "break lines, not words
 set breakindent       "break lines while preserving indentation
-set showbreak=.\ \    "prepend ellipsis and 2 spaces at break
+set showbreak=\ \     "prepend 2 spaces at break
 
 set viminfo+=n~/.vim/viminfo
 set undodir=~/.vim/undo
