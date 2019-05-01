@@ -13,13 +13,6 @@ set viminfo+=n~/.vim/viminfo
 set undodir=~/.vim/undo
 set dir=~/.vim/swap//
 
-"use ag instead of ack with ack.vim
-let g:ackprg = 'ag --vimgrep --smart-case'
-cnoreabbrev ag Ack
-cnoreabbrev aG Ack
-cnoreabbrev Ag Ack
-cnoreabbrev AG Ack
-
 "shortcut for insert mode -> normal mode
 inoremap jk <esc>
 
