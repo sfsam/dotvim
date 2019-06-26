@@ -64,6 +64,6 @@ hi WildMenu        guifg=#646464    guibg=#ffffff    gui=none     ctermfg=238   
 hi Pmenu           guifg=#000000    guibg=#d7bdff    gui=none     ctermfg=0      ctermbg=141
 hi PmenuSel        guifg=#ffffff    guibg=#7a25fa    gui=none     ctermfg=15     ctermbg=54
 
-hi def link htmlH1               Special
+hi def link markdownH1           Special
 hi def link markdownListMarker   Normal
 
