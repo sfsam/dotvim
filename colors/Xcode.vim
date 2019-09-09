@@ -13,7 +13,7 @@ endif
 
 let g:colors_name = "xcode"
 
-hi Cursor          guifg=NONE       guibg=#b3d8fd    gui=none
+hi Cursor          guifg=#ffffff    guibg=#1b6fd3    gui=none
 
 hi Normal          guifg=#000000    guibg=#ffffff    gui=none     ctermfg=0      ctermbg=NONE
 hi NonText         guifg=#dddddd    guibg=#ffffff    gui=none     ctermfg=0      ctermbg=NONE
