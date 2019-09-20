@@ -19,3 +19,6 @@
 [submodule "pack/bundle/start/vim-bullets"]
 	path = pack/bundle/start/vim-bullets
 	url = https://github.com/dkarter/bullets.vim.git
+[submodule "pack/bundle/start/vim-auto-save"]
+	path = pack/bundle/start/vim-auto-save
+	url = https://github.com/907th/vim-auto-save.git
