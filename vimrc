@@ -13,6 +13,12 @@ set viminfo+=n~/.vim/viminfo
 set undodir=~/.vim/undo
 set dir=~/.vim/swap//
 
+"auto-save
+set updatetime=1000       "save after cursor held this many milliseconds"
+let g:auto_save=0         "auto-save disabled by default
+let g:auto_save_silent=1  "do not display auto-save notification
+let g:auto_save_events = ["InsertLeave", "CursorHold", "CursorHoldI"]
+
 "shortcut for insert mode -> normal mode
 inoremap jk <esc>
 
@@ -34,9 +40,11 @@ set shiftwidth=4  "number of columns used for indentation
 "  invoke CtrlP with C-l
 "  use markdown syntax highlighting for all files
 "  set tabstop to 2 spaces
+"  enable auto-save
 noremap <C-l> :CtrlP ~/Dropbox/Notes<CR>
 autocmd BufRead,BufNewFile ~/Dropbox/Notes/* setlocal ft=markdown
 autocmd BufRead,BufNewFile ~/Dropbox/Notes/* setlocal ts=2 sts=2 sw=2
+autocmd BufRead,BufNewFile ~/Dropbox/Notes/* let b:auto_save=1
 
 "FileType-specific indentation
 autocmd FileType c setlocal ts=4 sts=4 sw=4
