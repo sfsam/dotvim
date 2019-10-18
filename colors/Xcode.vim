@@ -59,6 +59,8 @@ hi Search          guifg=NONE       guibg=#fbfac9    gui=none     ctermfg=NONE  
 
 hi StatusLine      guifg=#ffffff    guibg=#646464    gui=none     ctermfg=239    ctermbg=255
 hi StatusLineNC    guifg=#969696    guibg=#f2f2f2    gui=none     ctermfg=249    ctermbg=NONE
+hi StatusLineTerm  guifg=#ffffff    guibg=#646464    gui=none     ctermfg=239    ctermbg=255
+hi StatusLineTermNC guifg=#969696   guibg=#f2f2f2    gui=none     ctermfg=249    ctermbg=NONE
 hi WildMenu        guifg=#646464    guibg=#ffffff    gui=none     ctermfg=238    ctermbg=255
 
 hi Pmenu           guifg=#000000    guibg=#d7bdff    gui=none     ctermfg=0      ctermbg=141
