@@ -1,7 +1,7 @@
+colorscheme Xcode
 set guifont=Source\ Code\ Pro:h14
 set lines=30
 set t_Co=256
-colorscheme Xcode
 
 "URL highlight color
 let g:highlighturl_guifg = "#116cd6"
@@ -18,6 +18,13 @@ let g:PaperColor_Theme_Options = {
   \     }
   \   }
   \ }
-"set background=light
-"colorscheme PaperColor
+
+let g:fzf_colors = {
+  \   'fg+':    ['fg', 'Normal'],
+  \   'bg+':    ['bg', 'StatusLine'],
+  \   'gutter': ['bg', 'StatusLine'],
+  \   'hl+':    ['fg', 'Error'],
+  \   'hl':     ['fg', 'Error'],
+  \   'prompt': ['fg', 'LineNr'],
+  \ }
 

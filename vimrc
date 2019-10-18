@@ -41,9 +41,12 @@ set shiftwidth=4  "number of columns used for indentation
 "  use markdown syntax highlighting for all files
 "  set tabstop to 2 spaces
 "  enable auto-save
-noremap <C-l> :CtrlP ~/Dropbox/Notes<CR>
+"noremap <C-k> :CtrlP ~/Dropbox/Notes<CR>
 autocmd BufRead,BufNewFile ~/Dropbox/Notes/* setlocal ft=markdown
 autocmd BufRead,BufNewFile ~/Dropbox/Notes/* setlocal ts=2 sts=2 sw=2
+
+set rtp+=/usr/local/opt/fzf
+noremap <C-l> :FZF --extended ~/Dropbox/Notes<CR>
 
 "FileType-specific indentation
 autocmd FileType c setlocal ts=4 sts=4 sw=4
