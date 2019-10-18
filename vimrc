@@ -44,7 +44,6 @@ set shiftwidth=4  "number of columns used for indentation
 noremap <C-l> :CtrlP ~/Dropbox/Notes<CR>
 autocmd BufRead,BufNewFile ~/Dropbox/Notes/* setlocal ft=markdown
 autocmd BufRead,BufNewFile ~/Dropbox/Notes/* setlocal ts=2 sts=2 sw=2
-autocmd BufRead,BufNewFile ~/Dropbox/Notes/* let b:auto_save=1
 
 "FileType-specific indentation
 autocmd FileType c setlocal ts=4 sts=4 sw=4
