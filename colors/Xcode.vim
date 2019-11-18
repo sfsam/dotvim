@@ -67,5 +67,10 @@ hi Pmenu           guifg=#000000    guibg=#d7bdff    gui=none     ctermfg=0     
 hi PmenuSel        guifg=#ffffff    guibg=#7a25fa    gui=none     ctermfg=15     ctermbg=54
 
 hi def link markdownH1           Special
+hi def link markdownH2           Special
+hi def link markdownH3           Special
+hi def link markdownH4           Special
+hi def link markdownH5           Special
+hi def link markdownH6           Special
 hi def link markdownListMarker   Normal
 
