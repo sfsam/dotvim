@@ -13,12 +13,6 @@ set viminfo+=n~/.vim/viminfo
 set undodir=~/.vim/undo
 set dir=~/.vim/swap//
 
-"auto-save
-set updatetime=1000       "save after cursor held this many milliseconds"
-let g:auto_save=0         "auto-save disabled by default
-let g:auto_save_silent=1  "do not display auto-save notification
-let g:auto_save_events = ["InsertLeave", "CursorHold", "CursorHoldI"]
-
 "shortcut for insert mode -> normal mode
 inoremap jk <esc>
 
@@ -37,16 +31,13 @@ set softtabstop=4
 set shiftwidth=4  "number of columns used for indentation
 
 "pseudo-Notational Velocity for ~/Dropbox/Notes...
-"  invoke CtrlP with C-l
+"  invoke FZF with C-l
 "  use markdown syntax highlighting for all files
 "  set tabstop to 2 spaces
-"  enable auto-save
-"noremap <C-k> :CtrlP ~/Dropbox/Notes<CR>
-autocmd BufRead,BufNewFile ~/Dropbox/Notes/* setlocal ft=markdown
-autocmd BufRead,BufNewFile ~/Dropbox/Notes/* setlocal ts=2 sts=2 sw=2
-
 set rtp+=/usr/local/opt/fzf
 noremap <C-l> :FZF --extended ~/Dropbox/Notes<CR>
+autocmd BufRead,BufNewFile ~/Dropbox/Notes/* setlocal ft=markdown
+autocmd BufRead,BufNewFile ~/Dropbox/Notes/* setlocal ts=2 sts=2 sw=2
 
 "FileType-specific indentation
 autocmd FileType c setlocal ts=4 sts=4 sw=4

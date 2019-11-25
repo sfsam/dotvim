@@ -1,6 +1,3 @@
-[submodule "pack/bundle/start/ctrlp.vim"]
-	path = pack/bundle/start/ctrlp.vim
-	url = https://github.com/ctrlpvim/ctrlp.vim.git
 [submodule "pack/bundle/start/vim-highlighturl"]
 	path = pack/bundle/start/vim-highlighturl
 	url = https://github.com/itchyny/vim-highlighturl.git
@@ -19,6 +16,3 @@
 [submodule "pack/bundle/start/vim-bullets"]
 	path = pack/bundle/start/vim-bullets
 	url = https://github.com/dkarter/bullets.vim.git
-[submodule "pack/bundle/start/vim-auto-save"]
-	path = pack/bundle/start/vim-auto-save
-	url = https://github.com/907th/vim-auto-save.git
