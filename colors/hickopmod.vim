@@ -46,6 +46,8 @@ endif
 "}}}
 
 "highlights{{{
+exe "hi Ticker"      .s:v.'fg='.s:gre.s:v.'bg='.s:bla
+
 exe "hi Normal"      .s:v.'fg='.s:whi.s:v.'bg='.s:bla
 
 exe "hi NonText"     .s:v.'fg='.s:gr1                .s:v.'=NONE'

@@ -13,6 +13,8 @@ endif
 
 let g:colors_name = "xcode"
 
+hi Ticker          guifg=#008311    guibg=NONE       gui=bold     ctermfg=34     ctermbg=NONE
+
 hi Cursor          guifg=#ffffff    guibg=#f05098    gui=none
 
 hi Normal          guifg=#000000    guibg=#ffffff    gui=none     ctermfg=0      ctermbg=NONE
