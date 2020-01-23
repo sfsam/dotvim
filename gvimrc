@@ -19,12 +19,3 @@ let g:PaperColor_Theme_Options = {
   \   }
   \ }
 
-let g:fzf_colors = {
-  \   'fg+':    ['fg', 'Normal'],
-  \   'bg+':    ['bg', 'StatusLine'],
-  \   'gutter': ['bg', 'StatusLine'],
-  \   'hl+':    ['fg', 'Error'],
-  \   'hl':     ['fg', 'Error'],
-  \   'prompt': ['fg', 'LineNr'],
-  \ }
-

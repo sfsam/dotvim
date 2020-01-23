@@ -30,12 +30,19 @@ set tabstop=4     "how many columns a tab counts for
 set softtabstop=4
 set shiftwidth=4  "number of columns used for indentation
 
+"CtrlP opens new files in current window
+let g:ctrlp_open_new_file = 'r'
+
 "pseudo-Notational Velocity for ~/Dropbox/Notes...
-"  invoke FZF with C-l
+"  invoke with C-l
 "  use markdown syntax highlighting for all files
 "  set tabstop to 2 spaces
-set rtp+=/usr/local/opt/fzf
-noremap <C-l> :FZF --extended ~/Dropbox/Notes<CR>
+function PseudoNotationalVelocity()
+    :CtrlP ~/Dropbox/Notes
+    :CtrlPClearCache
+endfunction
+nnoremap <C-l> :call PseudoNotationalVelocity()<CR>
+inoremap <C-l> <esc>:call PseudoNotationalVelocity()<return>
 autocmd BufRead,BufNewFile ~/Dropbox/Notes/* setlocal ft=markdown
 autocmd BufRead,BufNewFile ~/Dropbox/Notes/* setlocal ts=2 sts=2 sw=2
 
