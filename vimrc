@@ -8,10 +8,15 @@ set hidden            "allow hiding buffers which have modifications
 set linebreak         "break lines, not words
 set breakindent       "break lines while preserving indentation
 set showbreak=\ \     "prepend 2 spaces at break
+set laststatus=2      "always show statusline
+syntax enable         "enable syntax highlighting
 
 set viminfo+=n~/.vim/viminfo
 set undodir=~/.vim/undo
 set dir=~/.vim/swap//
+
+" shortcut to open terminal session in current working directory
+map <F6> :let $VIM_DIR=expand('%:p:h')<CR>:terminal<CR>cd $VIM_DIR<CR>
 
 "shortcut for insert mode -> normal mode
 inoremap jk <esc>
