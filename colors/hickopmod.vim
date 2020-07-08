@@ -47,6 +47,7 @@ endif
 
 "highlights{{{
 exe "hi Ticker"      .s:v.'fg='.s:gre.s:v.'bg='.s:bla
+exe "hi Twitter"     .s:v.'fg='.s:blu.s:v.'bg='.s:bla
 
 exe "hi Normal"      .s:v.'fg='.s:whi.s:v.'bg='.s:bla
 

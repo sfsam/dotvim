@@ -14,6 +14,7 @@ endif
 let g:colors_name = "xcode"
 
 hi Ticker          guifg=#008311    guibg=NONE       gui=bold     ctermfg=34     ctermbg=NONE
+hi Twitter         guifg=#0084b4    guibg=NONE       gui=none     ctermfg=30     ctermbg=NONE
 
 hi Cursor          guifg=#ffffff    guibg=#f05098    gui=none
 

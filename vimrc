@@ -62,3 +62,10 @@ set stl+=%P\ \ \                   "percent into file
 set stl+=%{&fenc?&fenc:&enc}\ \ \  "encoding
 set stl+=%Y\                       "file type
 
+fun! GotoTwitterUser(username)
+    let l:link = 'https://twitter.com/' . a:username
+    call netrw#BrowseX(l:link, netrw#CheckIfRemote())
+endfun
+
+nnoremap <Leader>g :call GotoTwitterUser(expand('<cfile>'))<CR>
+
