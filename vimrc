@@ -9,6 +9,7 @@ set linebreak         "break lines, not words
 set breakindent       "break lines while preserving indentation
 set showbreak=\ \     "prepend 2 spaces at break
 set laststatus=2      "always show statusline
+set complete+=kspell  "use ctrl-n/ctrl-p for spelling completion
 syntax enable         "enable syntax highlighting
 
 set viminfo+=n~/.vim/viminfo
@@ -50,6 +51,7 @@ nnoremap <C-l> :call PseudoNotationalVelocity()<CR>
 inoremap <C-l> <esc>:call PseudoNotationalVelocity()<return>
 autocmd BufRead,BufNewFile ~/Dropbox/Notes/* setlocal ft=markdown
 autocmd BufRead,BufNewFile ~/Dropbox/Notes/* setlocal ts=2 sts=2 sw=2
+autocmd BufRead,BufNewFile ~/Dropbox/Notes/* setlocal spell
 
 "FileType-specific indentation
 autocmd FileType c setlocal ts=4 sts=4 sw=4
