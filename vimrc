@@ -29,6 +29,11 @@ inoremap ,d <C-R>=strftime('%Y-%m-%d')<CR>
 "shortcut to clear search highlights
 nnoremap <esc><esc> :noh<return>
 
+"remap broken gx for opening URLs to open-browser plugin
+let g:netrw_nogx = 1 "disable netrw's gx mapping.
+nmap gx <Plug>(openbrowser-smart-search)
+vmap gx <Plug>(openbrowser-smart-search)
+
 "default indentation
 set smartindent
 set expandtab     "expand tabs to spaces
