@@ -51,7 +51,6 @@ nnoremap <C-l> :call PseudoNotationalVelocity()<CR>
 inoremap <C-l> <esc>:call PseudoNotationalVelocity()<return>
 autocmd BufRead,BufNewFile ~/Dropbox/Notes/* setlocal ft=markdown
 autocmd BufRead,BufNewFile ~/Dropbox/Notes/* setlocal ts=2 sts=2 sw=2
-autocmd BufRead,BufNewFile ~/Dropbox/Notes/* setlocal spell
 
 "FileType-specific indentation
 autocmd FileType c setlocal ts=4 sts=4 sw=4
