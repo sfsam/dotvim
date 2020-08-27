@@ -16,7 +16,7 @@ set viminfo+=n~/.vim/viminfo
 set undodir=~/.vim/undo
 set dir=~/.vim/swap//
 
-" shortcut to open terminal session in current working directory
+"shortcut to open terminal session in current working directory
 map <F6> :let $VIM_DIR=expand('%:p:h')<CR>:terminal<CR>cd $VIM_DIR<CR>
 
 "shortcut for insert mode -> normal mode
@@ -28,6 +28,9 @@ inoremap ,d <C-R>=strftime('%Y-%m-%d')<CR>
 
 "shortcut to clear search highlights
 nnoremap <esc><esc> :noh<return>
+
+"URLs colored blue, but not underlined
+let g:highlighturl_underline=0
 
 "remap broken gx for opening URLs to open-browser plugin
 let g:netrw_nogx = 1 "disable netrw's gx mapping.
