@@ -18,14 +18,14 @@ hi Twitter         guifg=#0084b4    guibg=NONE       gui=none     ctermfg=30    
 
 hi Cursor          guifg=#ffffff    guibg=#f05098    gui=none
 
-hi Normal          guifg=#000000    guibg=#ffffff    gui=none     ctermfg=0      ctermbg=NONE
-hi NonText         guifg=#dddddd    guibg=#ffffff    gui=none     ctermfg=0      ctermbg=NONE
+hi Normal          guifg=#000000    guibg=#fcfcfa    gui=none     ctermfg=0      ctermbg=NONE
+hi NonText         guifg=#dddddd    guibg=#fcfcfa    gui=none     ctermfg=0      ctermbg=NONE
 
 hi ColorColumn     guifg=NONE       guibg=#f9f9f9    gui=none     ctermfg=NONE   ctermbg=255
 
 hi VertSplit       guifg=#969696    guibg=#f2f2f2    gui=none     ctermfg=255    ctermbg=249
-hi LineNr          guifg=#dddddd    guibg=#ffffff    gui=none     ctermfg=249    ctermbg=NONE
-hi CursorLineNR    guifg=#dddddd    guibg=#ffffff    gui=none     ctermfg=NONE   ctermbg=NONE
+hi LineNr          guifg=#dddddd    guibg=#fcfcfa    gui=none     ctermfg=249    ctermbg=NONE
+hi CursorLineNR    guifg=#dddddd    guibg=#fcfcfa    gui=none     ctermfg=NONE   ctermbg=NONE
 hi CursorLine      guifg=NONE       guibg=#f0f8ff    gui=none     ctermfg=NONE   ctermbg=NONE
 hi CursorColumn    guifg=NONE       guibg=#f0f8ff    gui=none     ctermfg=NONE   ctermbg=NONE
 
