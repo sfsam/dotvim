@@ -46,7 +46,7 @@ endif
 "}}}
 
 "highlights{{{
-exe "hi Ticker"      .s:v.'fg='.s:gre.s:v.'bg='.s:bla
+exe "hi Ticker"      .s:v.'fg='.s:gre.s:v.'bg='.s:bla.s:v.'=bold'
 exe "hi Twitter"     .s:v.'fg='.s:blu.s:v.'bg='.s:bla
 
 exe "hi Normal"      .s:v.'fg='.s:whi.s:v.'bg='.s:bla
@@ -94,6 +94,6 @@ exe "hi Statement"   .s:v.'fg='.s:bro                .s:v.'=NONE'
 exe "hi Todo"        .s:v.'fg=bg'    .s:v.'bg='.s:bro
 exe "hi Type"        .s:v.'fg='.s:gre                .s:v.'=NONE'
 
-exe "hi htmlH1"      .s:v.'fg='.s:yel
+exe "hi htmlH1"      .s:v.'fg='.s:yel.s:v.'=bold'
 exe "hi markdownListMarker" .s:v.'fg='.s:whi.s:v.'bg='.s:bla
 "}}}
