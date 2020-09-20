@@ -1,7 +1,9 @@
 "
-" Name:    xcode.vim
-" URL:     https://github.com/JaySandhu/xcode-vim
-" License: MIT <http://opensource.org/licenses/MIT>
+" Name:    Mowglii.vim
+" Based_on:
+"   Name:    xcode.vim
+"   URL:     https://github.com/JaySandhu/xcode-vim
+"   License: MIT <http://opensource.org/licenses/MIT>
 "
 
 hi clear
@@ -11,15 +13,19 @@ if exists("syntax_on")
     syntax reset
 endif
 
-let g:colors_name = "xcode"
+let g:colors_name = "mowglii"
 
-hi Ticker          guifg=#008311    guibg=NONE       gui=bold     ctermfg=34     ctermbg=NONE
+hi Ticker          guifg=#008311    guibg=NONE       gui=bold     ctermfg=34     ctermbg=NONE cterm=bold
 hi Twitter         guifg=#0084b4    guibg=NONE       gui=none     ctermfg=30     ctermbg=NONE
 
 hi Cursor          guifg=#ffffff    guibg=#f05098    gui=none
 
-hi Normal          guifg=#000000    guibg=#fcfcfa    gui=none     ctermfg=0      ctermbg=NONE
-hi NonText         guifg=#dddddd    guibg=#fcfcfa    gui=none     ctermfg=0      ctermbg=NONE
+hi Normal          guifg=#000000    guibg=#fcfcfa    gui=none     ctermfg=0      ctermbg=231
+hi NonText         guifg=#dddddd    guibg=#fcfcfa    gui=none     ctermfg=0      ctermbg=231
+
+hi TabLine         guifg=#666666    guibg=#c6c6c6    gui=none     ctermfg=239    ctermbg=251
+hi TabLineSel      guifg=#000000    guibg=#fcfcfa    gui=bold     ctermfg=0      ctermbg=NONE
+hi TabLineFill     guifg=#c6c6c6                                  ctermfg=251
 
 hi ColorColumn     guifg=NONE       guibg=#f9f9f9    gui=none     ctermfg=NONE   ctermbg=255
 
@@ -36,7 +42,7 @@ hi Comment         guifg=#008311    guibg=NONE       gui=none     ctermfg=22    
 hi Todo            guifg=#008311    guibg=NONE       gui=italic   ctermfg=22     ctermbg=NONE
 
 hi String          guifg=#cf3125    guibg=NONE       gui=none     ctermfg=124    ctermbg=NONE
-hi Special         guifg=#000000    guibg=NONE       gui=bold     ctermfg=0      ctermbg=NONE
+hi Special         guifg=#000000    guibg=NONE       gui=bold     ctermfg=0      ctermbg=NONE cterm=bold
 
 hi Type            guifg=#6f41a7    guibg=NONE       gui=none     ctermfg=55     ctermbg=NONE
 
