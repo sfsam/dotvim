@@ -12,7 +12,9 @@ set laststatus=2      "always show statusline
 set complete+=kspell  "use ctrl-n/ctrl-p for spelling completion
 syntax enable         "enable syntax highlighting
 
-set viminfo+=n~/.vim/viminfo
+if !has('nvim')
+  set viminfo+=n~/.vim/viminfo
+endif
 set undodir=~/.vim/undo
 set dir=~/.vim/swap//
 
