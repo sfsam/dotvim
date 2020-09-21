@@ -31,7 +31,9 @@ inoremap ,d <C-R>=strftime('%Y-%m-%d')<CR>
 "shortcut to clear search highlights
 nnoremap <esc><esc> :noh<return>
 
-"URLs colored blue, but not underlined
+"URL highlight color
+let g:highlighturl_ctermfg=111
+"URLs not underlined
 let g:highlighturl_underline=0
 
 "remap broken gx for opening URLs to open-browser plugin
@@ -68,14 +70,14 @@ autocmd FileType python setlocal ts=4 sts=4 sw=4
 autocmd FileType html setlocal ts=2 sts=2 sw=2
 autocmd FileType javascript setlocal ts=2 sts=2 sw=2
 
-set stl=\ %-3.3n\                  "buffer number
+set stl=\ %-3.3n                   "buffer number
 set stl+=%f\                       "file name
 set stl+=%h%m%r                    "flags: help, modified, read-only
 set stl+=%=                        "left/right split
-set stl+=L=%l/%L\ \ \              "line number/total lines
-set stl+=C=%c\ \ \                 "column number
-set stl+=%P\ \ \                   "percent into file
-set stl+=%{&fenc?&fenc:&enc}\ \ \  "encoding
+set stl+=L:%l/%L\ \                "line number/total lines
+set stl+=C:%c\ \                   "column number
+set stl+=%P\ \                     "percent into file
+set stl+=%{&fenc?&fenc:&enc}\ \    "encoding
 set stl+=%Y\                       "file type
 
 fun! GotoTwitterUser(username)
