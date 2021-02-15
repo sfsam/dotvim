@@ -21,4 +21,4 @@
 	url = https://github.com/tyru/open-browser.vim.git
 [submodule "pack/bundle/start/vim-bullets"]
 	path = pack/bundle/start/vim-bullets
-	url = https://github.com/dkarter/bullets.vim.git
+	url = https://github.com/sfsam/bullets.vim.git

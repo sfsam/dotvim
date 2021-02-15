@@ -22,10 +22,13 @@ set expandtab         "expand tabs to spaces
 set tabstop=4         "how many columns a tab counts for
 set softtabstop=4
 set shiftwidth=4      "number of columns used for indentation
-"set guioptions-=e     "use non-gui tabs
 set showtabline=2     "always show tabline"
 
+"Do no highlight extra whitespace in red
 let g:better_whitespace_enabled=0
+
+"Bullet style ordering indentation levels
+let g:bullets_outline_levels = ['ROM', 'ABC', 'num', 'abc', 'rom', 'std-']
 
 "FileType-specific indentation
 autocmd FileType c setlocal ts=4 sts=4 sw=4
