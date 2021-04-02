@@ -16,7 +16,7 @@ endif
 let g:colors_name = "mowglii"
 
 hi Ticker           guifg=#008311  guibg=NONE     gui=bold   ctermfg=34    ctermbg=NONE  cterm=bold
-hi Twitter          guifg=#0084b4  guibg=NONE     gui=none   ctermfg=30    ctermbg=NONE  cterm=bold
+hi Twitter          guifg=#116cd6  guibg=NONE     gui=none   ctermfg=30    ctermbg=NONE  cterm=bold
 hi Cursor           guifg=#ffffff  guibg=#f05098  gui=none
 hi Normal           guifg=#000000  guibg=#ffffff  gui=none   ctermfg=0     ctermbg=231
 hi NonText          guifg=#dddddd  guibg=#ffffff  gui=none   ctermfg=0     ctermbg=231

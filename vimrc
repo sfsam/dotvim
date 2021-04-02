@@ -22,7 +22,6 @@ set expandtab         "expand tabs to spaces
 set tabstop=4         "how many columns a tab counts for
 set softtabstop=4
 set shiftwidth=4      "number of columns used for indentation
-set showtabline=2     "always show tabline"
 
 "Do no highlight extra whitespace in red
 let g:better_whitespace_enabled=0
@@ -35,6 +34,7 @@ autocmd FileType c setlocal ts=4 sts=4 sw=4
 autocmd FileType python setlocal ts=4 sts=4 sw=4
 autocmd FileType html setlocal ts=2 sts=2 sw=2
 autocmd FileType javascript setlocal ts=2 sts=2 sw=2
+autocmd FileType vim setlocal ts=2 sts=2 sw=2
 
 "URL styling for vim-highlighturl plugin
 let g:highlighturl_ctermfg=111
@@ -58,10 +58,16 @@ let g:netrw_nogx = 1 "disable netrw's gx mapping.
 fun! MyGx()
     "If cursor is over a Twitter username, go to profile.
     "Otherwise, follow URL or do Google search.
+    "If cursor is over Ticker, append "+stock" before
+    "doing the search to get the stock quote.
+    let l:query = expand('<cfile>')
     if expand('<cWORD>') =~? '@[A-Za-z0-9_]\+'
-        call openbrowser#search(expand('<cfile>'), 'twitter-user')
+        call openbrowser#search(l:query, 'twitter-user')
     else
-        call openbrowser#smart_search(expand('<cfile>'))
+        if expand('<cWORD>') =~? '\$[A-Za-z][A-Za-z0-9]*'
+            let l:query = l:query[1:] . "+stock"
+        endif
+        call openbrowser#smart_search(l:query)
     endif
 endfun
 nmap gx :call MyGx()<CR>
