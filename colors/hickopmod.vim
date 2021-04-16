@@ -57,7 +57,7 @@ exe "hi IncSearch"   .s:v.'fg=bg'    .s:v.'bg=fg'    .s:v.'=NONE'
 exe "hi Search"      .s:v.'fg=bg'    .s:v.'bg='.s:bro
 exe "hi MoreMsg"     .s:v.'fg=fg'                    .s:v.'=NONE'
 exe "hi LineNr"      .s:v.'fg='.s:gr1.s:v.'bg='.s:bla
-exe "hi CursorLineNr".s:v.'fg=fg'    .s:v.'bg='.s:gr2
+exe "hi CursorLineNr".s:v.'fg=fg'    .s:v.'bg='.s:gr2.s:v.'=NONE'
 exe "hi Question"    .s:v.'fg=fg'                    .s:v.'=NONE'
 exe "hi StatusLine"  .s:v.'fg=fg'    .s:v.'bg='.s:gr2.s:v.'=NONE'
 exe "hi StatusLineNC".s:v.'fg='.s:gr1.s:v.'bg='.s:gr3.s:v.'=NONE'

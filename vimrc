@@ -23,6 +23,14 @@ set tabstop=4         "how many columns a tab counts for
 set softtabstop=4
 set shiftwidth=4      "number of columns used for indentation
 
+"FZF
+set rtp+=/usr/local/opt/fzf
+nnoremap <Leader>a :FZF --tiebreak=end ~/Dropbox/Notes<CR>
+inoremap <Leader>a <esc>:FZF --tiebreak=end ~/Dropbox/Notes<return>
+
+"Fold markdown 
+let g:markdown_folding=1
+
 "Do no highlight extra whitespace in red
 let g:better_whitespace_enabled=0
 
@@ -35,6 +43,7 @@ autocmd FileType python setlocal ts=4 sts=4 sw=4
 autocmd FileType html setlocal ts=2 sts=2 sw=2
 autocmd FileType javascript setlocal ts=2 sts=2 sw=2
 autocmd FileType vim setlocal ts=2 sts=2 sw=2
+autocmd FileType markdown setlocal foldlevel=99
 
 "URL styling for vim-highlighturl plugin
 let g:highlighturl_ctermfg=111
@@ -75,6 +84,8 @@ vmap gx :call MyGx()<CR>
 
 "CtrlP opens new files in current window
 let g:ctrlp_open_new_file = 'r'
+
+let g:ctrlp_user_command = 'find -L %s -type f'
 
 let g:ctrlp_follow_symlinks = 1
 
