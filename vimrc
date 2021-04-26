@@ -1,4 +1,13 @@
-colorscheme hickopmod
+syntax enable
+
+if has("gui_running")
+  set lines=30
+  set columns=90
+  set guifont=Source\ Code\ Pro:h14
+  colorscheme mowglii
+else
+  colorscheme hickopmod
+endif
 
 "Basic settings
 if !has('nvim')
@@ -16,26 +25,30 @@ set breakindent       "break lines while preserving indentation
 set showbreak=\ \     "prepend 2 spaces at break
 set laststatus=2      "always show statusline
 set complete+=kspell  "use ctrl-n/ctrl-p for spelling completion
-syntax enable         "enable syntax highlighting
 set smartindent
 set expandtab         "expand tabs to spaces
 set tabstop=4         "how many columns a tab counts for
 set softtabstop=4
 set shiftwidth=4      "number of columns used for indentation
 
-"FZF
-set rtp+=/usr/local/opt/fzf
-nnoremap <Leader>a :FZF --tiebreak=end ~/Dropbox/Notes<CR>
-inoremap <Leader>a <esc>:FZF --tiebreak=end ~/Dropbox/Notes<return>
-
 "Fold markdown 
-let g:markdown_folding=1
+let g:markdown_folding = 1
 
 "Do no highlight extra whitespace in red
-let g:better_whitespace_enabled=0
+let g:better_whitespace_enabled = 0
 
 "Bullet style ordering indentation levels
 let g:bullets_outline_levels = ['ROM', 'ABC', 'num', 'abc', 'rom', 'std-']
+
+"URL styling for vim-highlighturl plugin
+let g:highlighturl_ctermfg = 111
+let g:highlighturl_guifg = "#116cd6"
+let g:highlighturl_underline = 0
+
+"Ctrl-P
+let g:ctrlp_open_new_file = 'r' "open files in current window
+let g:ctrlp_user_command = 'find -L %s -type f'
+let g:ctrlp_follow_symlinks = 1
 
 "FileType-specific indentation
 autocmd FileType c setlocal ts=4 sts=4 sw=4
@@ -44,10 +57,6 @@ autocmd FileType html setlocal ts=2 sts=2 sw=2
 autocmd FileType javascript setlocal ts=2 sts=2 sw=2
 autocmd FileType vim setlocal ts=2 sts=2 sw=2
 autocmd FileType markdown setlocal foldlevel=99
-
-"URL styling for vim-highlighturl plugin
-let g:highlighturl_ctermfg=111
-let g:highlighturl_underline=0
 
 "Shortcut to open terminal session in current working directory
 map <F6> :let $VIM_DIR=expand('%:p:h')<CR>:terminal<CR>cd $VIM_DIR<CR>
@@ -81,13 +90,6 @@ fun! MyGx()
 endfun
 nmap gx :call MyGx()<CR>
 vmap gx :call MyGx()<CR>
-
-"CtrlP opens new files in current window
-let g:ctrlp_open_new_file = 'r'
-
-let g:ctrlp_user_command = 'find -L %s -type f'
-
-let g:ctrlp_follow_symlinks = 1
 
 "Pseudo-Notational Velocity for ~/Dropbox/Notes...
 "  invoke with C-l
