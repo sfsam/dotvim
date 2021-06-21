@@ -34,7 +34,7 @@ hi MatchParen       guifg=#ff0000  guibg=NONE     gui=bold   ctermfg=1     cterm
 hi Comment          guifg=#008311  guibg=NONE     gui=none   ctermfg=22    ctermbg=NONE
 hi Todo             guifg=#008311  guibg=NONE     gui=italic ctermfg=22    ctermbg=NONE
 hi String           guifg=#cf3125  guibg=NONE     gui=none   ctermfg=124   ctermbg=NONE
-hi Special          guifg=#000000  guibg=NONE     gui=bold   ctermfg=0     ctermbg=NONE  cterm=bold
+hi Special          guifg=#cc0000  guibg=NONE     gui=bold   ctermfg=0     ctermbg=NONE  cterm=bold
 hi Type             guifg=#6f41a7  guibg=NONE     gui=none   ctermfg=55    ctermbg=NONE
 hi Statement        guifg=#b833a2  guibg=NONE     gui=none   ctermfg=126   ctermbg=NONE
 hi Keyword          guifg=#b833a2  guibg=NONE     gui=none   ctermfg=126   ctermbg=NONE
