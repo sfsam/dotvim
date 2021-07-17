@@ -30,6 +30,7 @@ set expandtab         "expand tabs to spaces
 set tabstop=4         "how many columns a tab counts for
 set softtabstop=4
 set shiftwidth=4      "number of columns used for indentation
+set modeline
 
 "Fold markdown 
 let g:markdown_folding = 1
