@@ -22,3 +22,6 @@
 [submodule "pack/bundle/start/vim-bullets"]
 	path = pack/bundle/start/vim-bullets
 	url = https://github.com/sfsam/bullets.vim.git
+[submodule "pack/bundle/start/vim-surround"]
+	path = pack/bundle/start/vim-surround
+	url = https://github.com/tpope/vim-surround.git
