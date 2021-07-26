@@ -4,7 +4,7 @@ if has("gui_running")
   set lines=30
   set columns=90
   set guifont=Source\ Code\ Pro:h14
-  colorscheme mowglii
+  colorscheme xco
 else
   colorscheme hickopmod
 endif
