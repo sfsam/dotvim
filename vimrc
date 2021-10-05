@@ -4,7 +4,7 @@ if has("gui_running")
   set lines=30
   set columns=90
   set guifont=Source\ Code\ Pro:h14
-  colorscheme xco
+  colorscheme mowglii
 else
   colorscheme hickopmod
 endif
@@ -31,6 +31,7 @@ set tabstop=4         "how many columns a tab counts for
 set softtabstop=4
 set shiftwidth=4      "number of columns used for indentation
 set modeline
+set linespace=1       "number of pixel lines between characters"
 
 "Fold markdown 
 let g:markdown_folding = 1
