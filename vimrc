@@ -6,6 +6,16 @@ if has("gui_running")
   set guifont=Source\ Code\ Pro:h14
   colorscheme mowglii
 else
+  "Change cursor shape depending on mode
+  "  1 -> blinking block
+  "  2 -> solid block
+  "  3 -> blinking underscore
+  "  4 -> solid underscore
+  "  5 -> blinking vertical bar
+  "  6 -> solid vertical bar
+  let &t_SI.="\e[5 q" "SI = INSERT mode
+  let &t_SR.="\e[3 q" "SR = REPLACE mode
+  let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
   colorscheme hickopmod
 endif
 
