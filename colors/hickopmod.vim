@@ -16,7 +16,7 @@ let g:colors_name="hickopmod"
 "colors{{{
 if has("gui_running")
     let s:v=" gui"
-    let s:bla="#121212"
+    let s:bla="#000000"
     let s:whi="#c6c6c6"
     let s:gr1="#6c6c6c"
     let s:gr2="#3a3a3a"
@@ -30,7 +30,7 @@ if has("gui_running")
     let s:cya="#87afd7"
 else
     let s:v=" cterm"
-    let s:bla="233"
+    let s:bla="16"
     let s:whi="251"
     let s:gr1="242"
     let s:gr2="237"
