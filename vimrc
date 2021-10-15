@@ -77,6 +77,19 @@ map <F6> :let $VIM_DIR=expand('%:p:h')<CR>:terminal<CR>cd $VIM_DIR<CR>
 "Shortcut for insert mode -> normal mode
 inoremap jk <esc>
 
+"BufTabline
+let g:buftabline_indicators = 1
+nmap <D-1> <Plug>BufTabLine.Go(1)
+nmap <D-2> <Plug>BufTabLine.Go(2)
+nmap <D-3> <Plug>BufTabLine.Go(3)
+nmap <D-4> <Plug>BufTabLine.Go(4)
+nmap <D-5> <Plug>BufTabLine.Go(5)
+nmap <D-6> <Plug>BufTabLine.Go(6)
+nmap <D-7> <Plug>BufTabLine.Go(7)
+nmap <D-8> <Plug>BufTabLine.Go(8)
+nmap <D-9> <Plug>BufTabLine.Go(9)
+nmap <D-0> <Plug>BufTabLine.Go(-1)
+
 "Shortcut for datestamp
 nnoremap ,d "=strftime('%Y-%m-%d')<CR>P
 inoremap ,d <C-R>=strftime('%Y-%m-%d')<CR>

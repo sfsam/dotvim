@@ -25,3 +25,6 @@
 [submodule "pack/bundle/start/vim-surround"]
 	path = pack/bundle/start/vim-surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule "pack/bundle/start/vim-buftabline"]
+	path = pack/bundle/start/vim-buftabline
+	url = https://github.com/ap/vim-buftabline.git
