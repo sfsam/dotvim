@@ -1,10 +1,11 @@
 syntax enable
+filetype plugin indent on
+colorscheme mowglii
 
 if has("gui_running")
   set lines=30
   set columns=90
   set guifont=Source\ Code\ Pro:h14
-  colorscheme mowglii
 else
   "Change cursor shape depending on mode
   "  1 -> blinking block
@@ -16,18 +17,23 @@ else
   let &t_SI.="\e[5 q" "SI = INSERT mode
   let &t_SR.="\e[3 q" "SR = REPLACE mode
   let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
-  colorscheme hickopmod
+endif
+
+if has("nvim")
+  if $TERM_PROGRAM ==# "iTerm.app"
+    set termguicolors
+  endif
+else
+  set viminfo+=n~/.vim/viminfo
 endif
 
 "Basic settings
-if !has('nvim')
-  set viminfo+=n~/.vim/viminfo
-endif
 set undodir=~/.vim/undo
 set dir=~/.vim/swap//
 set nobackup          "don't save backup files
 set number            "show line numbers
 set hlsearch          "highlight search matches
+set incsearch         "show search highlights incrementally
 set ignorecase        "ignore case when searching
 set hidden            "allow hiding buffers which have modifications
 set linebreak         "break lines, not words
@@ -44,8 +50,10 @@ set modeline
 set linespace=1       "number of pixel lines between characters
 set clipboard=unnamed "unnamed register = * register (clipboard)
 
-"Fold markdown 
-let g:markdown_folding = 1
+let mapleader = " "
+
+"Use q to quit in readonly mode
+nnoremap <expr> q (&readonly ? ':q!<CR>' : 'q')
 
 "Do no highlight extra whitespace in red
 let g:better_whitespace_enabled = 0
@@ -54,7 +62,7 @@ let g:better_whitespace_enabled = 0
 let g:bullets_outline_levels = ['ROM', 'ABC', 'num', 'abc', 'rom', 'std-']
 
 "URL styling for vim-highlighturl plugin
-let g:highlighturl_ctermfg = 111
+let g:highlighturl_ctermfg = 26
 let g:highlighturl_guifg = "#116cd6"
 let g:highlighturl_underline = 0
 
@@ -76,6 +84,10 @@ map <F6> :let $VIM_DIR=expand('%:p:h')<CR>:terminal<CR>cd $VIM_DIR<CR>
 
 "Shortcut for insert mode -> normal mode
 inoremap jk <esc>
+
+"Shortcuts to cycle buffers
+nnoremap <leader>l :bnext<CR>
+nnoremap <leader>h :bprev<CR>
 
 "BufTabline
 let g:buftabline_indicators = 1
