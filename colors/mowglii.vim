@@ -20,8 +20,8 @@ hi Twitter          guifg=#116cd6  guibg=NONE     gui=none   ctermfg=32    cterm
 hi Cursor           guifg=#ffffff  guibg=#f05098  gui=none
 hi Normal           guifg=#000000  guibg=#ffffff  gui=none   ctermfg=0     ctermbg=231
 hi NonText          guifg=#dddddd  guibg=#ffffff  gui=none   ctermfg=0     ctermbg=231
-hi TabLine          guifg=#666666  guibg=#cfcfcf  gui=none   ctermfg=239   ctermbg=253 cterm=none
-hi TabLineSel       guifg=#000000  guibg=#ffffff  gui=bold   ctermfg=0     ctermbg=NONE
+hi TabLine          guifg=#666666  guibg=#dddddd  gui=none   ctermfg=239   ctermbg=253 cterm=none
+hi TabLineSel       guifg=#000000  guibg=NONE     gui=bold   ctermfg=0     ctermbg=NONE
 hi TabLineFill      guifg=#cfcfcf                            ctermfg=251
 hi ColorColumn      guifg=NONE     guibg=#f9f9f9  gui=none   ctermfg=NONE  ctermbg=255
 hi VertSplit        guifg=#969696  guibg=#f2f2f2  gui=none   ctermfg=255   ctermbg=249
