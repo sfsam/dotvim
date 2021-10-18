@@ -4,10 +4,8 @@ colorscheme mowglii
 
 if has("gui_running")
   set lines=30
-  set columns=90
+  set columns=105
   set guifont=Source\ Code\ Pro:h14
-  set cursorline
-  set cursorlineopt=number
   set go-=r "remove right scrollbar
 else
   "Change cursor shape depending on mode
