@@ -8,6 +8,7 @@ if has("gui_running")
   set guifont=Source\ Code\ Pro:h14
   set cursorline
   set cursorlineopt=number
+  set go-=r "remove right scrollbar
 else
   "Change cursor shape depending on mode
   "  1 -> blinking block
