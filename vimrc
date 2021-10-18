@@ -133,6 +133,5 @@ set stl+=%=                        "left/right split
 set stl+=L:%l/%L\ \                "line number/total lines
 set stl+=C:%c\ \                   "column number
 set stl+=%P\ \                     "percent into file
-set stl+=%{&fenc?&fenc:&enc}\ \    "encoding
 set stl+=%Y\                       "file type
 
