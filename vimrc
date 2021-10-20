@@ -92,7 +92,8 @@ nnoremap <leader>l :bnext<CR>
 nnoremap <leader>h :bprev<CR>
 
 "BufTabline
-let g:buftabline_indicators = 1
+let g:buftabline_show=1         "show tabs when >=2 buffers
+let g:buftabline_indicators = 1 "show modified state
 nmap <D-1> <Plug>BufTabLine.Go(1)
 nmap <D-2> <Plug>BufTabLine.Go(2)
 nmap <D-3> <Plug>BufTabLine.Go(3)
