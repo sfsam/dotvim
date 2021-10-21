@@ -27,11 +27,7 @@ if $TERM_PROGRAM ==# "iTerm.app"
   set termguicolors
 endif
 
-if has("nvim")
-  "Open terminal in insert mode; use ':T' to open in split
-  autocmd TermOpen * startinsert
-  command! -nargs=* T split | terminal <args>
-else
+if !has("nvim")
   set viminfo+=n~/.vim/viminfo
 endif
 
