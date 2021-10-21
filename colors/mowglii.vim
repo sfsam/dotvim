@@ -20,7 +20,7 @@ hi Twitter          guifg=#116cd6  guibg=NONE     gui=none   ctermfg=32    cterm
 hi Cursor           guifg=#ffffff  guibg=#f05098  gui=none
 hi Normal           guifg=#000000  guibg=#ffffff  gui=none   ctermfg=0     ctermbg=231
 hi NonText          guifg=#dddddd  guibg=#ffffff  gui=none   ctermfg=0     ctermbg=231
-hi TabLine          guifg=#666666  guibg=#dddddd  gui=none   ctermfg=239   ctermbg=253 cterm=none
+hi TabLine          guifg=#666666  guibg=#dddddd  gui=none   ctermfg=239   ctermbg=253   cterm=none
 hi TabLineSel       guifg=#000000  guibg=NONE     gui=bold   ctermfg=0     ctermbg=NONE
 hi TabLineFill      guifg=#cfcfcf                            ctermfg=251
 hi ColorColumn      guifg=NONE     guibg=#f9f9f9  gui=none   ctermfg=NONE  ctermbg=255
@@ -51,10 +51,10 @@ hi Character        guifg=#2934d4  guibg=NONE     gui=none   ctermfg=19    cterm
 hi SpecialChar      guifg=#2934d4  guibg=NONE     gui=none   ctermfg=19    ctermbg=NONE
 hi Visual           guifg=NONE     guibg=#b3d8fd  gui=none   ctermfg=NONE  ctermbg=159
 hi Search           guifg=NONE     guibg=#fbfac9  gui=none   ctermfg=NONE  ctermbg=229
-hi StatusLine       guifg=#ffffff  guibg=#555555  gui=none   ctermfg=239   ctermbg=255
-hi StatusLineNC     guifg=#969696  guibg=#f2f2f2  gui=none   ctermfg=249   ctermbg=NONE
-hi StatusLineTerm   guifg=#ffffff  guibg=#646464  gui=none   ctermfg=239   ctermbg=255
-hi StatusLineTermNC guifg=#969696  guibg=#f2f2f2  gui=none   ctermfg=249   ctermbg=NONE
+hi StatusLine       guifg=#555555  guibg=#ffffff  gui=reverse ctermfg=239  ctermbg=255
+hi StatusLineNC     guifg=#f2f2f2  guibg=#969696  gui=reverse ctermfg=253  ctermbg=242
+hi StatusLineTerm   guifg=#ffffff  guibg=#1187f2  gui=none   ctermfg=255   ctermbg=33
+hi StatusLineTermNC guifg=#aabbcc  guibg=#e2f1ff  gui=none   ctermfg=242   ctermbg=253
 hi WildMenu         guifg=#646464  guibg=#ffffff  gui=none   ctermfg=238   ctermbg=255
 hi Pmenu            guifg=#000000  guibg=#d7bdff  gui=none   ctermfg=0     ctermbg=141
 hi PmenuSel         guifg=#ffffff  guibg=#7a25fa  gui=none   ctermfg=15    ctermbg=54
