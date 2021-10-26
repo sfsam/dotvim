@@ -113,6 +113,26 @@ inoremap ,d <C-R>=strftime('%Y-%m-%d')<CR>
 "Shortcut to clear search highlights
 nnoremap <esc><esc> :noh<return>
 
+"Remap broken gx for opening URLs to open-browser plugin
+let g:netrw_nogx = 1 "disable netrw's gx mapping.
+fun! MyGx()
+    "If cursor is over a Twitter username, go to profile.
+    "Otherwise, follow URL or do Google search.
+    "If cursor is over Ticker, append "+stock" before
+    "doing the search to get the stock quote.
+    let l:query = expand('<cfile>')
+    if expand('<cWORD>') =~? '@[A-Za-z0-9_]\+'
+        call openbrowser#search(l:query, 'twitter-user')
+    else
+        if expand('<cWORD>') =~? '\$[A-Za-z][A-Za-z0-9]*'
+            let l:query = l:query[1:] . "+stock"
+        endif
+        call openbrowser#smart_search(l:query)
+    endif
+endfun
+nmap gx :call MyGx()<CR>
+vmap gx :call MyGx()<CR>
+
 "Pseudo-Notational Velocity for ~/Dropbox/Notes...
 "  invoke with C-l
 "  use markdown syntax highlighting for all files

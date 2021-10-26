@@ -22,3 +22,6 @@
 [submodule "pack/bundle/start/vim-buftabline"]
 	path = pack/bundle/start/vim-buftabline
 	url = https://github.com/ap/vim-buftabline.git
+[submodule "pack/bundle/start/vim-open-browser"]
+	path = pack/bundle/start/vim-open-browser
+	url = https://github.com/tyru/open-browser.vim.git
