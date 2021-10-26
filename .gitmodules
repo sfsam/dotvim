@@ -13,9 +13,6 @@
 [submodule "pack/bundle/start/vim-ctrlp"]
 	path = pack/bundle/start/vim-ctrlp
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
-[submodule "pack/bundle/start/vim-bullets"]
-	path = pack/bundle/start/vim-bullets
-	url = https://github.com/sfsam/bullets.vim.git
 [submodule "pack/bundle/start/vim-surround"]
 	path = pack/bundle/start/vim-surround
 	url = https://github.com/tpope/vim-surround.git
@@ -25,3 +22,6 @@
 [submodule "pack/bundle/start/vim-open-browser"]
 	path = pack/bundle/start/vim-open-browser
 	url = https://github.com/tyru/open-browser.vim.git
+[submodule "pack/bundle/start/vim-bullets"]
+	path = pack/bundle/start/vim-bullets
+	url = https://github.com/dkarter/bullets.vim.git
