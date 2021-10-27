@@ -51,6 +51,8 @@ set softtabstop=4
 set shiftwidth=4      "number of columns used for indentation
 set modeline
 set clipboard=unnamed "unnamed register = * register (clipboard)
+set cursorline
+set cursorlineopt=number
 
 let mapleader = " "
 
@@ -72,6 +74,19 @@ let g:highlighturl_underline = 0
 let g:ctrlp_open_new_file = 'r' "open files in current window
 let g:ctrlp_user_command = 'find -L %s -type f'
 let g:ctrlp_follow_symlinks = 1
+let g:ctrlp_use_caching = 0
+let g:ctrlp_buffer_func = {
+            \ 'enter': 'MyCtrlPEnter',
+            \ 'exit':  'MyCtrlPExit'
+            \ }
+fun! MyCtrlPEnter()
+  set cursorline
+  set cursorlineopt=both
+endfun
+fun! MyCtrlPExit()
+  set cursorline
+  set cursorlineopt=number
+endfun
 
 "FileType-specific indentation
 autocmd FileType c setlocal ts=4 sts=4 sw=4
