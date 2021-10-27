@@ -50,7 +50,6 @@ set tabstop=4         "how many columns a tab counts for
 set softtabstop=4
 set shiftwidth=4      "number of columns used for indentation
 set modeline
-set linespace=1       "number of pixel lines between characters
 set clipboard=unnamed "unnamed register = * register (clipboard)
 
 let mapleader = " "
