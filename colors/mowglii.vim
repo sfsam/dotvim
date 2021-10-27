@@ -26,8 +26,8 @@ hi TabLineFill      guifg=#cfcfcf                            ctermfg=251
 hi ColorColumn      guifg=NONE     guibg=#f9f9f9  gui=none   ctermfg=NONE  ctermbg=255
 hi VertSplit        guifg=#969696  guibg=#f2f2f2  gui=none   ctermfg=255   ctermbg=249
 hi LineNr           guifg=#dddddd  guibg=#ffffff  gui=none   ctermfg=249   ctermbg=NONE
-hi CursorLineNR     guifg=#2e9dff  guibg=#f0f8ff  gui=bold   ctermfg=NONE  ctermbg=NONE  cterm=bold
-hi CursorLine       guifg=NONE     guibg=#f0f8ff  gui=none   ctermfg=NONE  ctermbg=231   cterm=none
+hi CursorLineNR     guifg=#2e9dff  guibg=#ecf4fd  gui=bold   ctermfg=NONE  ctermbg=NONE  cterm=bold
+hi CursorLine       guifg=NONE     guibg=#ecf4fd  gui=none   ctermfg=NONE  ctermbg=231   cterm=none
 hi CursorColumn     guifg=NONE     guibg=#f0f8ff  gui=none   ctermfg=NONE  ctermbg=NONE
 hi Error            guifg=#ff0000  guibg=NONE     gui=bold   ctermfg=1     ctermbg=NONE
 hi MatchParen       guifg=#ff0000  guibg=NONE     gui=bold   ctermfg=1     ctermbg=NONE
