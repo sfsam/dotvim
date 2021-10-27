@@ -125,7 +125,7 @@ nnoremap ,d "=strftime('%Y-%m-%d')<CR>P
 inoremap ,d <C-R>=strftime('%Y-%m-%d')<CR>
 
 "Shortcut to clear search highlights
-nnoremap <esc><esc> :noh<return>
+nnoremap <esc><esc> :let @/ = ""<return>
 
 "Remap broken gx for opening URLs to open-browser plugin
 let g:netrw_nogx = 1 "disable netrw's gx mapping.
