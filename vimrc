@@ -55,6 +55,9 @@ set cursorline
 set cursorlineopt=number
 set display=lastline
 
+"Vertical split separator (Box Drawings Light Vertical)
+set fillchars+=vert:│
+
 let mapleader = " "
 
 "Use q to quit in readonly mode
