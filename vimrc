@@ -53,6 +53,7 @@ set modeline
 set clipboard=unnamed "unnamed register = * register (clipboard)
 set cursorline
 set cursorlineopt=number
+set display=lastline
 
 let mapleader = " "
 
