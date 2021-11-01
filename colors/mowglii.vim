@@ -17,6 +17,7 @@ let g:colors_name = "mowglii"
 
 hi Ticker           guifg=#008311  guibg=NONE     gui=bold   ctermfg=28    ctermbg=NONE  cterm=bold
 hi Twitter          guifg=#116cd6  guibg=NONE     gui=none   ctermfg=32    ctermbg=NONE  cterm=bold
+hi Terminal         guifg=#ffffff  guibg=#000000  gui=none
 hi Cursor           guifg=#ffffff  guibg=#f05098  gui=none
 hi Normal           guifg=#000000  guibg=#ffffff  gui=none   ctermfg=0     ctermbg=231
 hi NonText          guifg=#dddddd  guibg=#ffffff  gui=none   ctermfg=0     ctermbg=231
