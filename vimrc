@@ -27,12 +27,10 @@ if $TERM_PROGRAM ==# "iTerm.app"
   set termguicolors
 endif
 
-if !has("nvim")
-  set viminfo+=n~/.vim/viminfo
-endif
-
+set viminfo+=n~/.vim/viminfo
 set undodir=~/.vim/undo
 set dir=~/.vim/swap//
+
 set nobackup          "don't save backup files
 set number            "show line numbers
 set hlsearch          "highlight search matches
