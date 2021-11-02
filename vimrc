@@ -60,9 +60,6 @@ set fillchars+=vert:│
 
 let mapleader = " "
 
-"Enable Markdown folding
-let g:markdown_folding=1
-
 "Do no highlight extra whitespace in red
 let g:better_whitespace_enabled = 0
 
