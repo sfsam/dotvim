@@ -88,15 +88,35 @@ fun! MyCtrlPExit()
 endfun
 
 "FileType-specific indentation
-autocmd FileType c setlocal ts=4 sts=4 sw=4
-autocmd FileType python setlocal ts=4 sts=4 sw=4
-autocmd FileType html setlocal ts=2 sts=2 sw=2
-autocmd FileType javascript setlocal ts=2 sts=2 sw=2
-autocmd FileType vim setlocal ts=2 sts=2 sw=2
-autocmd FileType markdown setlocal foldlevel=99
+augroup file_types
+  autocmd!
+  autocmd FileType c setlocal ts=4 sts=4 sw=4
+  autocmd FileType python setlocal ts=4 sts=4 sw=4
+  autocmd FileType html setlocal ts=2 sts=2 sw=2
+  autocmd FileType javascript setlocal ts=2 sts=2 sw=2
+  autocmd FileType vim setlocal ts=2 sts=2 sw=2
+  autocmd FileType markdown setlocal foldlevel=99
+augroup END
 
 "Shortcut to open terminal session in current working directory
 map <F6> :let $VIM_DIR=expand('%:p:h')<CR>:terminal<CR>cd $VIM_DIR<CR>
+
+"Define terminal colors for gvim
+let g:terminal_ansi_colors = [
+      \ '#000000', '#c03030',
+      \ '#00b000', '#a08020',
+      \ '#6090f0', '#e000e0',
+      \ '#00e0e0', '#e0e0e0',
+      \ '#808080', '#ff4040',
+      \ '#40ff40', '#ffff40',
+      \ '#4040ff', '#ff40ff',
+      \ '#40ffff', '#ffffff',
+      \]
+hi Terminal guifg=#dadada guibg=#222222 gui=none
+augroup terminal_colors
+    autocmd!
+    autocmd ColorScheme * :hi Terminal guifg=#dadada guibg=#222222 gui=none
+augroup END
 
 "Shortcut for insert mode -> normal mode
 inoremap jk <esc>
@@ -156,8 +176,11 @@ function PseudoNotationalVelocity()
 endfunction
 nnoremap <C-l> :call PseudoNotationalVelocity()<CR>
 inoremap <C-l> <esc>:call PseudoNotationalVelocity()<return>
-autocmd BufRead,BufNewFile ~/Dropbox/Notes/* setlocal ft=markdown
-autocmd BufRead,BufNewFile ~/Dropbox/Notes/* setlocal ts=2 sts=2 sw=2
+augroup pseudo_notational_velocity
+  autocmd!
+  autocmd BufRead,BufNewFile ~/Dropbox/Notes/* setlocal ft=markdown
+  autocmd BufRead,BufNewFile ~/Dropbox/Notes/* setlocal ts=2 sts=2 sw=2
+augroup END
 
 "Statusline
 set stl=\ %-3.3n                   "buffer number

@@ -15,21 +15,8 @@ endif
 
 let g:colors_name = "mowglii"
 
-"Define terminal ansi colors for gvim
-let g:terminal_ansi_colors = [
-      \ '#000000', '#c03030',
-      \ '#00b000', '#a08020',
-      \ '#6090f0', '#e000e0',
-      \ '#00e0e0', '#e0e0e0',
-      \ '#808080', '#ff4040',
-      \ '#40ff40', '#ffff40',
-      \ '#4040ff', '#ff40ff',
-      \ '#40ffff', '#ffffff',
-      \]
-
 hi Ticker           guifg=#008311  guibg=NONE     gui=bold   ctermfg=28    ctermbg=NONE  cterm=bold
 hi Twitter          guifg=#116cd6  guibg=NONE     gui=none   ctermfg=32    ctermbg=NONE  cterm=bold
-hi Terminal         guifg=#dadada  guibg=#222222  gui=none
 hi Cursor           guifg=#ffffff  guibg=#f05098  gui=none
 hi Normal           guifg=#000000  guibg=#ffffff  gui=none   ctermfg=0     ctermbg=231
 hi NonText          guifg=#dddddd  guibg=#ffffff  gui=none   ctermfg=0     ctermbg=231
