@@ -170,10 +170,10 @@ vmap gx :call MyGx()<CR>
 "  invoke with C-l
 "  use markdown syntax highlighting for all files
 "  set tabstop to 2 spaces
-function PseudoNotationalVelocity()
+fun! PseudoNotationalVelocity()
     :CtrlP ~/Dropbox/Notes
     :CtrlPClearCache
-endfunction
+endfun
 nnoremap <C-l> :call PseudoNotationalVelocity()<CR>
 inoremap <C-l> <esc>:call PseudoNotationalVelocity()<return>
 augroup pseudo_notational_velocity
