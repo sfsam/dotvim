@@ -78,14 +78,14 @@ let g:ctrlp_buffer_func = {
             \ 'enter': 'MyCtrlPEnter',
             \ 'exit':  'MyCtrlPExit'
             \ }
-fun! MyCtrlPEnter()
+function! MyCtrlPEnter() abort
   set cursorline
   set cursorlineopt=both
-endfun
-fun! MyCtrlPExit()
+endfunction
+function! MyCtrlPExit() abort
   set cursorline
   set cursorlineopt=number
-endfun
+endfunction
 
 "FileType-specific indentation
 augroup file_types
@@ -148,7 +148,7 @@ nnoremap <esc><esc> :let @/ = ""<return>
 
 "Remap broken gx for opening URLs to open-browser plugin
 let g:netrw_nogx = 1 "disable netrw's gx mapping.
-fun! MyGx()
+function! MyGx() abort
     "If cursor is over a Twitter username, go to profile.
     "Otherwise, follow URL or do Google search.
     "If cursor is over Ticker, append "+stock" before
@@ -162,7 +162,7 @@ fun! MyGx()
         endif
         call openbrowser#smart_search(l:query)
     endif
-endfun
+endfunction
 nmap gx :call MyGx()<CR>
 vmap gx :call MyGx()<CR>
 
@@ -170,10 +170,10 @@ vmap gx :call MyGx()<CR>
 "  invoke with C-l
 "  use markdown syntax highlighting for all files
 "  set tabstop to 2 spaces
-fun! PseudoNotationalVelocity()
+function! PseudoNotationalVelocity() abort
     :CtrlP ~/Dropbox/Notes
     :CtrlPClearCache
-endfun
+endfunction
 nnoremap <C-l> :call PseudoNotationalVelocity()<CR>
 inoremap <C-l> <esc>:call PseudoNotationalVelocity()<return>
 augroup pseudo_notational_velocity
