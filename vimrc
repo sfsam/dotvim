@@ -53,39 +53,21 @@ set cursorline
 set cursorlineopt=number
 set display=lastline
 
-"Vertical split separator (Box Drawings Light Vertical)
-set fillchars+=vert:│
-
 let mapleader = " "
 
-"Do no highlight extra whitespace in red
-let g:better_whitespace_enabled = 0
+"Shortcut for insert mode -> normal mode
+inoremap jk <esc>
 
-"Bullet style ordering indentation levels
-let g:bullets_outline_levels = ['ROM', 'ABC', 'num', 'abc', 'rom', 'std-']
+"Shortcuts to cycle buffers
+nnoremap <leader>l :bnext<CR>
+nnoremap <leader>h :bprev<CR>
 
-"URL styling for vim-highlighturl plugin
-let g:highlighturl_ctermfg = 26
-let g:highlighturl_guifg = "#116cd6"
-let g:highlighturl_underline = 0
+"Shortcut for datestamp
+nnoremap ,d "=strftime('%Y-%m-%d')<CR>P
+inoremap ,d <C-R>=strftime('%Y-%m-%d')<CR>
 
-"Ctrl-P
-let g:ctrlp_open_new_file = 'r' "open files in current window
-let g:ctrlp_user_command = 'find -L %s -type f'
-let g:ctrlp_follow_symlinks = 1
-let g:ctrlp_use_caching = 0
-let g:ctrlp_buffer_func = {
-            \ 'enter': 'MyCtrlPEnter',
-            \ 'exit':  'MyCtrlPExit'
-            \ }
-function! MyCtrlPEnter() abort
-  set cursorline
-  set cursorlineopt=both
-endfunction
-function! MyCtrlPExit() abort
-  set cursorline
-  set cursorlineopt=number
-endfunction
+"Shortcut to clear search highlights
+nnoremap <esc><esc> :let @/ = ""<return>
 
 "FileType-specific indentation
 augroup file_types
@@ -118,12 +100,19 @@ augroup terminal_colors
     autocmd ColorScheme * :hi Terminal guifg=#dadada guibg=#222222 gui=none
 augroup END
 
-"Shortcut for insert mode -> normal mode
-inoremap jk <esc>
+"Vertical split separator (Box Drawings Light Vertical)
+set fillchars+=vert:│
 
-"Shortcuts to cycle buffers
-nnoremap <leader>l :bnext<CR>
-nnoremap <leader>h :bprev<CR>
+"Do no highlight extra whitespace in red
+let g:better_whitespace_enabled = 0
+
+"Bullet style ordering indentation levels
+let g:bullets_outline_levels = ['ROM', 'ABC', 'num', 'abc', 'rom', 'std-']
+
+"URL styling for vim-highlighturl plugin
+let g:highlighturl_ctermfg = 26
+let g:highlighturl_guifg = "#116cd6"
+let g:highlighturl_underline = 0
 
 "BufTabline
 let g:buftabline_show=1         "show tabs when >=2 buffers
@@ -138,13 +127,6 @@ nmap <D-7> <Plug>BufTabLine.Go(7)
 nmap <D-8> <Plug>BufTabLine.Go(8)
 nmap <D-9> <Plug>BufTabLine.Go(9)
 nmap <D-0> <Plug>BufTabLine.Go(-1)
-
-"Shortcut for datestamp
-nnoremap ,d "=strftime('%Y-%m-%d')<CR>P
-inoremap ,d <C-R>=strftime('%Y-%m-%d')<CR>
-
-"Shortcut to clear search highlights
-nnoremap <esc><esc> :let @/ = ""<return>
 
 "Remap broken gx for opening URLs to open-browser plugin
 let g:netrw_nogx = 1 "disable netrw's gx mapping.
@@ -166,8 +148,26 @@ endfunction
 nmap gx :call MyGx()<CR>
 vmap gx :call MyGx()<CR>
 
+"Ctrl-P
+let g:ctrlp_open_new_file = 'r' "open files in current window
+let g:ctrlp_user_command = 'find -L %s -type f'
+let g:ctrlp_follow_symlinks = 1
+let g:ctrlp_use_caching = 0
+let g:ctrlp_buffer_func = {
+            \ 'enter': 'MyCtrlPEnter',
+            \ 'exit':  'MyCtrlPExit'
+            \ }
+function! MyCtrlPEnter() abort
+  set cursorline
+  set cursorlineopt=both
+endfunction
+function! MyCtrlPExit() abort
+  set cursorline
+  set cursorlineopt=number
+endfunction
+
 "Pseudo-Notational Velocity for ~/Dropbox/Notes...
-"  invoke with C-l
+"  invoke with <C-l>
 "  use markdown syntax highlighting for all files
 "  set tabstop to 2 spaces
 function! PseudoNotationalVelocity() abort
@@ -183,12 +183,12 @@ augroup pseudo_notational_velocity
 augroup END
 
 "Statusline
-set stl=\ %-3.3n                   "buffer number
-set stl+=%f\                       "file name
-set stl+=%h%m%r                    "flags: help, modified, read-only
-set stl+=%=                        "left/right split
-set stl+=L:%l/%L\ \                "line number/total lines
-set stl+=C:%c\ \                   "column number
-set stl+=%P\ \                     "percent into file
-set stl+=%Y\                       "file type
+set stl=\ %-3.3n         "buffer number
+set stl+=%f\             "file name
+set stl+=%h%m%r          "flags: help, modified, read-only
+set stl+=%=              "left/right split
+set stl+=L:%l/%L\ \      "line number/total lines
+set stl+=C:%c\ \         "column number
+set stl+=%P\ \           "percent into file
+set stl+=%Y\             "file type
 
