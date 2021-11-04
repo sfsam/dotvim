@@ -27,7 +27,9 @@ if $TERM_PROGRAM ==# "iTerm.app"
   set termguicolors
 endif
 
-set viminfo+=n~/.vim/viminfo
+if !has("nvim")
+  set viminfo+=n~/.vim/viminfo
+endif
 set undodir=~/.vim/undo
 set dir=~/.vim/swap//
 
