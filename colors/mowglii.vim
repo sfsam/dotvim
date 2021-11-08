@@ -25,7 +25,7 @@ hi TabLineSel       guifg=#000000  guibg=NONE     gui=bold   ctermfg=0     cterm
 hi TabLineFill      guifg=#cfcfcf                            ctermfg=251
 hi ColorColumn      guifg=NONE     guibg=#f9f9f9  gui=none   ctermfg=NONE  ctermbg=255
 hi VertSplit        guifg=#969696  guibg=#f2f2f2  gui=none   ctermfg=255   ctermbg=249
-hi LineNr           guifg=#dddddd  guibg=#ffffff  gui=none   ctermfg=249   ctermbg=NONE
+hi LineNr           guifg=#dddddd  guibg=NONE     gui=none   ctermfg=249   ctermbg=NONE
 hi CursorLineNR     guifg=#2e9dff  guibg=NONE     gui=bold   ctermfg=69    ctermbg=255   cterm=bold
 hi CursorLine       guifg=NONE     guibg=#d0e1f5  gui=none   ctermfg=NONE  ctermbg=255   cterm=none
 hi CursorColumn     guifg=NONE     guibg=#f0f8ff  gui=none   ctermfg=NONE  ctermbg=NONE
