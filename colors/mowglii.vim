@@ -59,6 +59,7 @@ hi StatusLineTermNC guifg=#aabbcc  guibg=#e2f1ff  gui=none   ctermfg=242   cterm
 hi WildMenu         guifg=#646464  guibg=#ffffff  gui=none   ctermfg=238   ctermbg=255
 hi Pmenu            guifg=#000000  guibg=#d7bdff  gui=none   ctermfg=0     ctermbg=141
 hi PmenuSel         guifg=#ffffff  guibg=#7a25fa  gui=none   ctermfg=15    ctermbg=54
+hi SpecialKey       guifg=#dddddd  guibg=NONE     gui=none   ctermfg=249   ctermbg=NONE
 
 hi def link markdownH1           Special
 hi def link markdownH2           Special
