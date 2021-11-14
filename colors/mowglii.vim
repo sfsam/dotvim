@@ -1,10 +1,7 @@
-"
-" Name: mowglii.vim
-" Based_on:
-" Name: xcode.vim
+
+" File: mowglii.vim
+" Description: vim colorscheme based on xcode
 " URL: https://github.com/JaySandhu/xcode-vim
-" License: MIT <http://opensource.org/licenses/MIT>
-"
 
 hi clear
 set background=light
@@ -15,19 +12,19 @@ endif
 
 let g:colors_name = "mowglii"
 
-hi BufTabLineSep    guifg=#c9c9c9  guibg=#dddddd
+hi BufTabLineSep    guifg=#c9c9c6  guibg=#ddddda  gui=none   ctermfg=248   ctermbg=253   cterm=none
 hi Ticker           guifg=#008311  guibg=NONE     gui=bold   ctermfg=28    ctermbg=NONE  cterm=bold
 hi Twitter          guifg=#116cd6  guibg=NONE     gui=none   ctermfg=32    ctermbg=NONE  cterm=bold
 hi Cursor           guifg=#ffffff  guibg=#f05098  gui=none
-hi Normal           guifg=#000000  guibg=#ffffff  gui=none   ctermfg=0     ctermbg=231
-hi NonText          guifg=#dddddd  guibg=#ffffff  gui=none   ctermfg=0     ctermbg=231
-hi TabLine          guifg=#777777  guibg=#dddddd  gui=none   ctermfg=239   ctermbg=253   cterm=none
-hi TabLineSel       guifg=#000000  guibg=NONE     gui=bold   ctermfg=0     ctermbg=NONE
-hi TabLineFill      guifg=#cfcfcf                            ctermfg=251
+hi Normal           guifg=#1c1c19  guibg=#fffdf6  gui=none   ctermfg=0     ctermbg=231
+hi NonText          guifg=#ddddda  guibg=NONE     gui=none   ctermfg=0     ctermbg=231
+hi TabLine          guifg=#777774  guibg=#ddddda  gui=none   ctermfg=239   ctermbg=253   cterm=none
+hi TabLineSel       guifg=NONE     guibg=NONE     gui=bold   ctermfg=NONE  ctermbg=NONE
+hi TabLineFill      guifg=#cfcfcc                            ctermfg=251
 hi ColorColumn      guifg=NONE     guibg=#f9f9f9  gui=none   ctermfg=NONE  ctermbg=255
 hi VertSplit        guifg=#969696  guibg=#f2f2f2  gui=none   ctermfg=255   ctermbg=249
-hi LineNr           guifg=#dddddd  guibg=NONE     gui=none   ctermfg=249   ctermbg=NONE
-hi CursorLineNR     guifg=#2e9dff  guibg=NONE     gui=bold   ctermfg=69    ctermbg=255   cterm=bold
+hi LineNr           guifg=#d6d6d3  guibg=NONE     gui=none   ctermfg=249   ctermbg=NONE
+hi CursorLineNR     guifg=#2c9aff  guibg=NONE     gui=none   ctermfg=69    ctermbg=255   cterm=bold
 hi CursorLine       guifg=NONE     guibg=#d0e1f5  gui=none   ctermfg=NONE  ctermbg=255   cterm=none
 hi CursorColumn     guifg=NONE     guibg=#f0f8ff  gui=none   ctermfg=NONE  ctermbg=NONE
 hi Error            guifg=#ff0000  guibg=NONE     gui=bold   ctermfg=1     ctermbg=NONE
@@ -59,7 +56,7 @@ hi StatusLineTermNC guifg=#aabbcc  guibg=#e2f1ff  gui=none   ctermfg=242   cterm
 hi WildMenu         guifg=#646464  guibg=#ffffff  gui=none   ctermfg=238   ctermbg=255
 hi Pmenu            guifg=#000000  guibg=#d7bdff  gui=none   ctermfg=0     ctermbg=141
 hi PmenuSel         guifg=#ffffff  guibg=#7a25fa  gui=none   ctermfg=15    ctermbg=54
-hi SpecialKey       guifg=#dddddd  guibg=NONE     gui=none   ctermfg=249   ctermbg=NONE
+hi SpecialKey       guifg=#d9d9d6  guibg=NONE     gui=none   ctermfg=249   ctermbg=NONE
 
 hi def link markdownH1           Special
 hi def link markdownH2           Special

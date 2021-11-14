@@ -1,10 +1,9 @@
 
 " File: hickopmod.vim
+" Description: vim colorscheme based on hickop
 " Version: 1.0
-" Description: colorscheme for vim and gvim based on hickop
 
 hi clear
-
 set background=dark
 
 if exists("syntax_on")
@@ -14,12 +13,12 @@ endif
 let g:colors_name="hickopmod"
 
 "colors{{{
-if has("termguicolors")
+if has("gui_running")
     let s:v=" gui"
-    let s:bla="#000000"
-    let s:whi="#c6c6c6"
-    let s:gr1="#6c6c6c"
-    let s:gr2="#3a3a3a"
+    let s:bla="#101010"
+    let s:whi="#aaaaaa"
+    let s:gr1="#868686"
+    let s:gr2="#404040"
     let s:gr3="#1c1c1c"
     let s:red="#af5f5f"
     let s:gre="#87af87"
@@ -31,8 +30,8 @@ if has("termguicolors")
 else
     let s:v=" cterm"
     let s:bla="16"
-    let s:whi="251"
-    let s:gr1="242"
+    let s:whi="248"
+    let s:gr1="244"
     let s:gr2="237"
     let s:gr3="234"
     let s:red="131"
@@ -48,16 +47,15 @@ endif
 "highlights{{{
 exe "hi Ticker"      .s:v.'fg='.s:gre.s:v.'bg='.s:bla.s:v.'=bold'
 exe "hi Twitter"     .s:v.'fg='.s:blu.s:v.'bg='.s:bla.s:v.'=bold'
-
+exe "hi BufTabLineSep".s:v.'fg='.s:gr3.s:v.'bg='.s:gr2.s:v.'=NONE'
 exe "hi Normal"      .s:v.'fg='.s:whi.s:v.'bg='.s:bla
-
 exe "hi NonText"     .s:v.'fg='.s:gr1                .s:v.'=NONE'
 exe "hi ErrorMsg"    .s:v.'fg='.s:red.s:v.'bg=bg'
 exe "hi IncSearch"   .s:v.'fg=bg'    .s:v.'bg=fg'    .s:v.'=NONE'
 exe "hi Search"      .s:v.'fg=bg'    .s:v.'bg='.s:bro
 exe "hi MoreMsg"     .s:v.'fg=fg'                    .s:v.'=NONE'
-exe "hi LineNr"      .s:v.'fg='.s:gr1.s:v.'bg='.s:bla
-exe "hi CursorLineNr".s:v.'fg=fg'    .s:v.'bg='.s:gr2.s:v.'=NONE'
+exe "hi LineNr"      .s:v.'fg='.s:gr2.s:v.'bg='.s:bla.s:v.'=NONE'
+exe "hi CursorLineNr".s:v.'fg=fg'    .s:v.'bg=bg'    .s:v.'=NONE'
 exe "hi Question"    .s:v.'fg=fg'                    .s:v.'=NONE'
 exe "hi StatusLine"  .s:v.'fg=fg'    .s:v.'bg='.s:gr2.s:v.'=NONE'
 exe "hi StatusLineNC".s:v.'fg='.s:gr1.s:v.'bg='.s:gr3.s:v.'=NONE'
@@ -74,15 +72,14 @@ exe "hi DiffDelete"  .s:v.'fg='.s:red.s:v.'bg='.s:red.s:v.'=NONE'
 exe "hi DiffText"    .s:v.'fg=bg'    .s:v.'bg='.s:cya.s:v.'=NONE'
 exe "hi SignColumn"  .s:v.'fg=fg'    .s:v.'bg=bg'
 exe "hi Pmenu"       .s:v.'fg=bg'    .s:v.'bg='.s:gr1
-exe "hi PmenuSel"    .s:v.'fg=fg'    .s:v.'bg='.s:gr1
+exe "hi PmenuSel"    .s:v.'fg=fg'    .s:v.'bg='.s:pur
 exe "hi PmenuSbar"                   .s:v.'bg='.s:gr1
 exe "hi PmenuThumb"  .s:v.'fg=fg'
-exe "hi TabLine"     .s:v.'fg='.s:gr1.s:v.'bg='.s:gr2.s:v.'=NONE'
+exe "hi TabLine"     .s:v.'fg='.s:gr1.s:v.'bg='.s:gr2.s:v.'=NONE'.' term=NONE'
 exe "hi TabLineSel"  .s:v.'fg=fg'    .s:v.'bg=bg'    .s:v.'=NONE'
-exe "hi TabLineFill" .s:v.'fg=bg'    .s:v.'bg='.s:gr2.s:v.'=NONE'
+exe "hi TabLineFill" .s:v.'fg='.s:gr1.s:v.'bg='.s:gr2.s:v.'=NONE'
 exe "hi CursorLine"                  .s:v.'bg='.s:gr2.s:v.'=NONE'
 exe "hi ColorColumn"                 .s:v.'bg='.s:gr2.s:v.'=NONE'
-
 exe "hi MatchParen"  .s:v.'fg=bg'    .s:v.'bg='.s:bro
 exe "hi Comment"     .s:v.'fg='.s:gr1
 exe "hi Constant"    .s:v.'fg='.s:pur
@@ -93,7 +90,6 @@ exe "hi Special"     .s:v.'fg='.s:yel
 exe "hi Statement"   .s:v.'fg='.s:bro                .s:v.'=NONE'
 exe "hi Todo"        .s:v.'fg=bg'    .s:v.'bg='.s:bro
 exe "hi Type"        .s:v.'fg='.s:gre                .s:v.'=NONE'
-
 exe "hi htmlH1"      .s:v.'fg='.s:yel.s:v.'=bold'
 exe "hi markdownListMarker" .s:v.'fg='.s:whi.s:v.'bg='.s:bla
 "}}}
