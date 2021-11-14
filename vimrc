@@ -64,12 +64,19 @@ inoremap jk <esc>
 nnoremap <leader>l :bnext<CR>
 nnoremap <leader>h :bprev<CR>
 
-"Shortcut for datestamp
-nnoremap ,d "=strftime('%Y-%m-%d')<CR>P
-inoremap ,d <C-R>=strftime('%Y-%m-%d')<CR>
+"Shortcut for datestamp: 2021-11-13 (Sat)
+nnoremap ,d "=strftime('%Y-%m-%d (%a)')<CR>P
+inoremap ,d <C-R>=strftime('%Y-%m-%d (%a)')<CR>
+
+"Shortcut for datestamp: 2021-11-13
+nnoremap ,dd "=strftime('%Y-%m-%d')<CR>P
+inoremap ,dd <C-R>=strftime('%Y-%m-%d')<CR>
 
 "Shortcut to clear search highlights
-nnoremap <esc><esc> :let @/ = ""<return>
+nnoremap <esc><esc> :noh<CR>
+
+"Shortcut to toggle color schemes
+nnoremap <expr> <C-k> ":colo ".(g:colors_name=='mowglii'?"hickopmod":"mowglii")."\<CR>"
 
 "FileType-specific indentation
 augroup file_types
@@ -156,6 +163,7 @@ let g:ctrlp_open_new_file = 'r' "open files in current window
 let g:ctrlp_user_command = 'find -L %s -type f'
 let g:ctrlp_follow_symlinks = 1
 let g:ctrlp_use_caching = 0
+let g:ctrlp_match_func = {'match': 'cpsm#CtrlPMatch'}
 let g:ctrlp_buffer_func = {
             \ 'enter': 'MyCtrlPEnter',
             \ 'exit':  'MyCtrlPExit'
