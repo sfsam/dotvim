@@ -163,7 +163,6 @@ let g:ctrlp_open_new_file = 'r' "open files in current window
 let g:ctrlp_user_command = 'find -L %s -type f'
 let g:ctrlp_follow_symlinks = 1
 let g:ctrlp_use_caching = 0
-let g:ctrlp_match_func = {'match': 'cpsm#CtrlPMatch'}
 let g:ctrlp_buffer_func = {
             \ 'enter': 'MyCtrlPEnter',
             \ 'exit':  'MyCtrlPExit'
