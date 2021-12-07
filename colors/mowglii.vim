@@ -49,8 +49,8 @@ hi Character        guifg=#2934d4  guibg=NONE     gui=none   ctermfg=19    cterm
 hi SpecialChar      guifg=#2934d4  guibg=NONE     gui=none   ctermfg=19    ctermbg=NONE
 hi Visual           guifg=NONE     guibg=#b3d8fd  gui=none   ctermfg=NONE  ctermbg=159
 hi Search           guifg=NONE     guibg=#fbfac9  gui=none   ctermfg=NONE  ctermbg=229
-hi StatusLine       guifg=#555555  guibg=#ffffff  gui=reverse ctermfg=239  ctermbg=255
-hi StatusLineNC     guifg=#f2f2f2  guibg=#969696  gui=reverse ctermfg=253  ctermbg=242
+hi StatusLine       guifg=#dadad8  guibg=#555552  gui=reverse ctermfg=239  ctermbg=255
+hi StatusLineNC     guifg=#f2f2ea  guibg=#969693  gui=reverse ctermfg=253  ctermbg=242
 hi StatusLineTerm   guifg=#ffffff  guibg=#1187f2  gui=none   ctermfg=255   ctermbg=33
 hi StatusLineTermNC guifg=#aabbcc  guibg=#e2f1ff  gui=none   ctermfg=242   ctermbg=253
 hi WildMenu         guifg=#646464  guibg=#ffffff  gui=none   ctermfg=238   ctermbg=255
