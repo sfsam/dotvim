@@ -7,9 +7,6 @@
 [submodule "pack/bundle/start/vim-better-whitespace"]
 	path = pack/bundle/start/vim-better-whitespace
 	url = https://github.com/ntpeters/vim-better-whitespace.git
-[submodule "pack/bundle/start/vim-tabular"]
-	path = pack/bundle/start/vim-tabular
-	url = https://github.com/godlygeek/tabular.git
 [submodule "pack/bundle/start/vim-ctrlp"]
 	path = pack/bundle/start/vim-ctrlp
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
