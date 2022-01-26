@@ -127,6 +127,7 @@ let g:highlighturl_underline = 0
 let g:buftabline_show=1         "show tabs when >=2 buffers
 let g:buftabline_indicators = 1 "show modified state
 let g:buftabline_separators = 1 "show separators
+let g:buftabline_numbers = 2    "show ordinal number
 nmap <D-1> <Plug>BufTabLine.Go(1)
 nmap <D-2> <Plug>BufTabLine.Go(2)
 nmap <D-3> <Plug>BufTabLine.Go(3)
@@ -146,7 +147,7 @@ function! MyGx() abort
     "If cursor is over Ticker, append "+stock" before
     "doing the search to get the stock quote.
     let l:query = expand('<cfile>')
-    if expand('<cWORD>') =~? '@[A-Za-z0-9_]\+'
+    if expand('<cWORD>') =~? '^@[A-Za-z0-9_]\+'
         call openbrowser#search(l:query, 'twitter-user')
     else
         if expand('<cWORD>') =~? '\$[A-Za-z][A-Za-z0-9]*'
