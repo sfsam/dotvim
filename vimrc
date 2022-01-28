@@ -85,7 +85,7 @@ augroup file_types
   autocmd FileType python setlocal ts=4 sts=4 sw=4
   autocmd FileType html setlocal ts=2 sts=2 sw=2
   autocmd FileType javascript setlocal ts=2 sts=2 sw=2
-  autocmd FileType vim setlocal ts=2 sts=2 sw=2
+  autocmd FileType vim setlocal ts=2 sts=2 sw=2 noexpandtab
   autocmd FileType markdown setlocal foldlevel=99
 augroup END
 
@@ -126,7 +126,7 @@ let g:highlighturl_underline = 0
 "BufTabline
 let g:buftabline_show=1         "show tabs when >=2 buffers
 let g:buftabline_indicators = 1 "show modified state
-let g:buftabline_separators = 1 "show separators
+let g:buftabline_separators = 2 "show separators for hidden buffers
 let g:buftabline_numbers = 2    "show ordinal number
 nmap <D-1> <Plug>BufTabLine.Go(1)
 nmap <D-2> <Plug>BufTabLine.Go(2)
