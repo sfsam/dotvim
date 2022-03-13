@@ -112,7 +112,7 @@ augroup END
 "Vertical split separator (Box Drawings Light Vertical)
 set fillchars+=vert:│
 
-"Do no highlight extra whitespace in red
+"Do not highlight extra whitespace in red
 let g:better_whitespace_enabled = 0
 
 "Bullet style ordering indentation levels
@@ -124,7 +124,7 @@ let g:highlighturl_guifg = "#116cd6"
 let g:highlighturl_underline = 0
 
 "BufTabline
-let g:buftabline_show=1         "show tabs when >=2 buffers
+let g:buftabline_show = 1       "show buffer tabs when 2+ buffers
 let g:buftabline_indicators = 1 "show modified state
 let g:buftabline_separators = 2 "show separators for hidden buffers
 let g:buftabline_numbers = 2    "show ordinal number
@@ -142,19 +142,19 @@ nmap <D-0> <Plug>BufTabLine.Go(-1)
 "Remap broken gx for opening URLs to open-browser plugin
 let g:netrw_nogx = 1 "disable netrw's gx mapping.
 function! MyGx() abort
-    "If cursor is over a Twitter username, go to profile.
-    "Otherwise, follow URL or do Google search.
-    "If cursor is over Ticker, append "+stock" before
-    "doing the search to get the stock quote.
-    let l:query = expand('<cfile>')
-    if expand('<cWORD>') =~? '^@[A-Za-z0-9_]\+'
-        call openbrowser#search(l:query, 'twitter-user')
-    else
-        if expand('<cWORD>') =~? '\$[A-Za-z][A-Za-z0-9]*'
-            let l:query = l:query[1:] . "+stock"
-        endif
-        call openbrowser#smart_search(l:query)
-    endif
+  "If cursor is over a Twitter username, go to profile.
+  "Otherwise, follow URL or do Google search.
+  "If cursor is over Ticker, append "+stock" before
+  "doing the search to get the stock quote.
+  let l:query = expand('<cfile>')
+	if expand('<cWORD>') =~? '^@[A-Za-z0-9_]\+'
+		call openbrowser#search(l:query, 'twitter-user')
+	else
+		if expand('<cWORD>') =~? '\$[A-Za-z][A-Za-z0-9]*'
+			let l:query = l:query[1:] . "+stock"
+		endif
+		call openbrowser#smart_search(l:query)
+	endif
 endfunction
 nmap gx :call MyGx()<CR>
 vmap gx :call MyGx()<CR>
