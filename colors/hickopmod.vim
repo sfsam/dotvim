@@ -13,7 +13,7 @@ endif
 let g:colors_name="hickopmod"
 
 "colors{{{
-if has("gui_running")
+if has("termguicolors")
     let s:v=" gui"
     let s:bla="#101010"
     let s:whi="#aaaaaa"
