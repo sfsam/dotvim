@@ -6,7 +6,7 @@ if has("gui_running")
   set lines=30
   set columns=105
   set guifont=Source\ Code\ Pro:h14
-  set go= "no guioptions (scrollbars, toolbars, etc)
+  set go=r "right scroller only, no other guioptions
 else
   "Change cursor shape depending on mode
   "  1 -> blinking block
@@ -54,6 +54,7 @@ set clipboard=unnamed "unnamed register = * register (clipboard)
 set cursorline
 set cursorlineopt=number
 set display=lastline
+set autochdir         "working dir is based on file location
 
 let mapleader = " "
 
