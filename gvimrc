@@ -3,9 +3,9 @@
 "https://github.com/nathanaelkane/vim-command-w
 function! MyCommandW() abort
   if len(filter(range(1, bufnr('$')), 'buflisted(v:val) == 1')) == 1
-    q
+    confirm q
   else
-    bd
+    confirm bd
   endif
 endfunction
 
