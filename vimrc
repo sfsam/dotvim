@@ -3,10 +3,8 @@ filetype plugin indent on
 colorscheme mowglii
 
 if has("gui_running")
-  set lines=30
-  set columns=105
   set guifont=Source\ Code\ Pro:h14
-  set go=r "right scroller only, no other guioptions
+  set go=
 else
   "Change cursor shape depending on mode
   "  1 -> blinking block
