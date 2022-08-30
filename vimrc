@@ -192,6 +192,16 @@ augroup pseudo_notational_velocity
   autocmd BufRead,BufNewFile ~/Dropbox/Notes/* setlocal ts=2 sts=2 sw=2
 augroup END
 
+function! ToggleSpellCheck() abort
+	set spell!
+	if &spell
+		echo "Spell ON"
+	else
+		echo "Spell OFF"
+	endif
+endfunction
+nnoremap <silent> <Leader>S :call ToggleSpellCheck()<CR>
+
 "Statusline
 set stl=\ %-3.3n         "buffer number
 set stl+=%f\             "file name
