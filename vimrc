@@ -56,6 +56,10 @@ set autochdir         "working dir is based on file location
 
 let mapleader = " "
 
+"j,k work by visual line unless provided with repeat count
+nnoremap <expr> j v:count ? 'j' : 'gj'
+nnoremap <expr> k v:count ? 'k' : 'gk'
+
 "Shortcut for insert mode -> normal mode
 inoremap jk <esc>
 
