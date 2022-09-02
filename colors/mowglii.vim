@@ -22,7 +22,7 @@ hi TabLine          guifg=#777774  guibg=#e3e1da  gui=none   ctermfg=239   cterm
 hi TabLineSel       guifg=NONE     guibg=NONE     gui=bold   ctermfg=NONE  ctermbg=NONE
 hi TabLineFill      guifg=#d7d5cf                            ctermfg=251
 hi ColorColumn      guifg=NONE     guibg=#f9f9f9  gui=none   ctermfg=NONE  ctermbg=255
-hi VertSplit        guifg=#969696  guibg=#f2f2f2  gui=none   ctermfg=255   ctermbg=249
+hi VertSplit        guifg=#969696  guibg=NONE     gui=none   ctermfg=255   ctermbg=NONE
 hi LineNr           guifg=#d6d6d3  guibg=NONE     gui=none   ctermfg=249   ctermbg=NONE
 hi CursorLineNR     guifg=#2c9aff  guibg=NONE     gui=none   ctermfg=69    ctermbg=255   cterm=bold
 hi CursorLine       guifg=NONE     guibg=#d0e1f5  gui=none   ctermfg=NONE  ctermbg=255   cterm=none
