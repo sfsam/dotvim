@@ -9,7 +9,9 @@ function! MyCommandW() abort
   endif
 endfunction
 
-macmenu File.Close key=<nop>
+if has("gui_macvim")
+	macmenu File.Close key=<nop>
+endif
 nmap <D-w> :call MyCommandW()<CR>
 imap <D-w> <Esc>:call MyCommandW()<CR>
 
