@@ -51,6 +51,11 @@ set cursorlineopt=number
 set display=lastline
 set autochdir         "working dir is based on file location
 
+"Enable mode shapes, Cursor highlight group, and blinking
+:set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
+		  \,a:blinkwait750-blinkoff350-blinkon750-Cursor/lCursor
+		  \,sm:block-blinkwait175-blinkoff150-blinkon175
+
 let mapleader = " "
 
 "j,k work by visual line unless provided with repeat count
