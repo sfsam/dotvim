@@ -83,6 +83,13 @@ nnoremap <esc><esc> :noh<CR>
 "Shortcut to toggle color schemes
 nnoremap <expr> <C-k> ":colo ".(g:colors_name=='mowglii'?"hickopmod":"mowglii")."\<CR>"
 
+"Relative line numbers except in insert mode
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
+  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
+augroup END
+
 "FileType-specific indentation
 augroup file_types
   autocmd!
