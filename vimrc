@@ -81,7 +81,7 @@ inoremap ,dd <C-R>=strftime('%Y-%m-%d')<CR>
 nnoremap <esc><esc> :noh<CR>
 
 "Shortcut to toggle color schemes
-nnoremap <expr> <C-k> ":colo ".(g:colors_name=='mowglii'?"hickopmod":"mowglii")."\<CR>"
+nnoremap <expr> <C-k> ":colo ".(g:colors_name=='mowglii'?"habamax":"mowglii")."\<CR>"
 
 "Relative line numbers except in insert mode
 augroup numbertoggle
