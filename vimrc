@@ -3,7 +3,7 @@ filetype plugin indent on
 
 colorscheme habamax
 if has("gui_running")
-	colorscheme mowglii
+  colorscheme mowglii
 endif
 
 "Change cursor shape depending on mode
@@ -58,8 +58,8 @@ set smoothscroll      "scroll by visual lines
 
 "Enable mode shapes, Cursor highlight group, and blinking
 :set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
-		  \,a:blinkwait750-blinkoff350-blinkon750-Cursor/lCursor
-		  \,sm:block-blinkwait175-blinkoff150-blinkon175
+      \,a:blinkwait750-blinkoff350-blinkon750-Cursor/lCursor
+      \,sm:block-blinkwait175-blinkoff150-blinkon175
 
 let mapleader = " "
 
@@ -102,7 +102,7 @@ augroup file_types
   autocmd FileType python setlocal ts=4 sts=4 sw=4 tw=79 sr ai
   autocmd FileType html setlocal ts=2 sts=2 sw=2
   autocmd FileType javascript setlocal ts=2 sts=2 sw=2
-  autocmd FileType vim setlocal ts=2 sts=2 sw=2 noexpandtab
+  autocmd FileType vim setlocal ts=2 sts=2 sw=2
   autocmd FileType markdown setlocal ts=2 sts=2 sw=2
 augroup END
 
@@ -164,14 +164,14 @@ function! MyGx() abort
   "If cursor is over Ticker, append "+stock" before
   "doing the search to get the stock quote.
   let l:query = expand('<cfile>')
-	if expand('<cWORD>') =~? '^@[A-Za-z0-9_]\+'
-		call openbrowser#search(l:query, 'twitter-user')
-	else
-		if expand('<cWORD>') =~? '\$[A-Za-z][A-Za-z0-9]*'
-			let l:query = l:query[1:] . "+stock"
-		endif
-		call openbrowser#smart_search(l:query)
-	endif
+  if expand('<cWORD>') =~? '^@[A-Za-z0-9_]\+'
+    call openbrowser#search(l:query, 'twitter-user')
+  else
+    if expand('<cWORD>') =~? '\$[A-Za-z][A-Za-z0-9]*'
+      let l:query = l:query[1:] . "+stock"
+    endif
+    call openbrowser#smart_search(l:query)
+  endif
 endfunction
 nmap gx :call MyGx()<CR>
 vmap gx :call MyGx()<CR>
@@ -211,12 +211,12 @@ augroup pseudo_notational_velocity
 augroup END
 
 function! ToggleSpellCheck() abort
-	set spell!
-	if &spell
-		echo "Spell ON"
-	else
-		echo "Spell OFF"
-	endif
+  set spell!
+  if &spell
+    echo "Spell ON"
+  else
+    echo "Spell OFF"
+  endif
 endfunction
 nnoremap <silent> <Leader>S :call ToggleSpellCheck()<CR>
 
