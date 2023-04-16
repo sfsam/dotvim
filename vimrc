@@ -1,6 +1,10 @@
 syntax enable
 filetype plugin indent on
-colorscheme mowglii
+
+colorscheme habamax
+if has("gui_running")
+	colorscheme mowglii
+endif
 
 "Change cursor shape depending on mode
 "  1 -> blinking block
