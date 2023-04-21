@@ -207,8 +207,8 @@ nnoremap <C-l> :call PseudoNotationalVelocity()<CR>
 inoremap <C-l> <esc>:call PseudoNotationalVelocity()<return>
 augroup pseudo_notational_velocity
   autocmd!
-  autocmd BufRead,BufNewFile ~/Dropbox/Notes/* setlocal ft=markdown
-  autocmd BufRead,BufNewFile ~/Dropbox/Notes/* setlocal ts=2 sts=2 sw=2
+  autocmd BufRead,BufNewFile ~/Library/CloudStorage/Dropbox/Notes/* setlocal ft=markdown
+  autocmd BufRead,BufNewFile ~/Library/CloudStorage/Dropbox/Notes/* setlocal ts=2 sts=2 sw=2
 augroup END
 
 function! ToggleSpellCheck() abort
