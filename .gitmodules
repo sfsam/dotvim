@@ -19,3 +19,6 @@
 [submodule "pack/bundle/start/rust"]
 	path = pack/bundle/start/rust
 	url = https://github.com/rust-lang/rust.vim
+[submodule "pack/bundle/start/tagbar"]
+	path = pack/bundle/start/tagbar
+	url = https://github.com/preservim/tagbar.git
