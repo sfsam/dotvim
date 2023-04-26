@@ -27,6 +27,18 @@ endif
 " confusing.
 set nrformats-=octal
 
+" In many terminal emulators the mouse works just fine.  By enabling it you
+" can position the cursor, Visually select and scroll with the mouse.
+" Only xterm can grab the mouse events when using the shift key, for other
+" terminals use ":", select text and press Esc.
+if has('mouse')
+  if &term =~ 'xterm'
+    set mouse=a
+  else
+    set mouse=nvi
+  endif
+endif
+
 " Enable file type detection.
 " Use the default filetype settings, so that mail gets 'tw' set to 72,
 " 'cindent' is on in C files, etc.
