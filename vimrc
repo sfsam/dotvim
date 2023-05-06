@@ -204,16 +204,16 @@ let g:buftabline_show = 1       "show buffer tabs when 2+ buffers
 let g:buftabline_indicators = 1 "show modified state
 let g:buftabline_separators = 2 "show separators for hidden buffers
 let g:buftabline_numbers = 2    "show ordinal number
-nmap <D-1> <Plug>BufTabLine.Go(1)
-nmap <D-2> <Plug>BufTabLine.Go(2)
-nmap <D-3> <Plug>BufTabLine.Go(3)
-nmap <D-4> <Plug>BufTabLine.Go(4)
-nmap <D-5> <Plug>BufTabLine.Go(5)
-nmap <D-6> <Plug>BufTabLine.Go(6)
-nmap <D-7> <Plug>BufTabLine.Go(7)
-nmap <D-8> <Plug>BufTabLine.Go(8)
-nmap <D-9> <Plug>BufTabLine.Go(9)
-nmap <D-0> <Plug>BufTabLine.Go(-1)
+nmap <leader>1 <Plug>BufTabLine.Go(1)
+nmap <leader>2 <Plug>BufTabLine.Go(2)
+nmap <leader>3 <Plug>BufTabLine.Go(3)
+nmap <leader>4 <Plug>BufTabLine.Go(4)
+nmap <leader>5 <Plug>BufTabLine.Go(5)
+nmap <leader>6 <Plug>BufTabLine.Go(6)
+nmap <leader>7 <Plug>BufTabLine.Go(7)
+nmap <leader>8 <Plug>BufTabLine.Go(8)
+nmap <leader>9 <Plug>BufTabLine.Go(9)
+nmap <leader>0 <Plug>BufTabLine.Go(-1)
 
 "Remap broken gx for opening URLs to open-browser plugin
 let g:netrw_nogx = 1 "disable netrw's gx mapping.
