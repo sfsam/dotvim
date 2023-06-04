@@ -59,10 +59,7 @@ endif
 
 "------------------------------------
 
-colorscheme habamax
-if has("gui_running")
-  colorscheme mowglii
-endif
+colorscheme mowglii
 
 "Change cursor shape depending on mode
 "  1 -> blinking block

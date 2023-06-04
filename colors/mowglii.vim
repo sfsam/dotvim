@@ -28,7 +28,7 @@ hi CursorLineNR     guifg=#2c9aff  guibg=NONE     gui=none   ctermfg=69    cterm
 hi CursorLine       guifg=NONE     guibg=#d0e1f5  gui=none   ctermfg=NONE  ctermbg=255   cterm=none
 hi CursorColumn     guifg=NONE     guibg=#f0f8ff  gui=none   ctermfg=NONE  ctermbg=NONE
 hi Error            guifg=#ff0000  guibg=NONE     gui=bold   ctermfg=1     ctermbg=NONE
-hi MatchParen       guifg=#ff0000  guibg=NONE     gui=bold   ctermfg=1     ctermbg=NONE
+hi MatchParen       guifg=#000000  guibg=#cfdfff  gui=bold   ctermfg=1     ctermbg=NONE  cterm=bold
 hi Comment          guifg=#008311  guibg=NONE     gui=none   ctermfg=22    ctermbg=NONE
 hi Todo             guifg=#008311  guibg=NONE     gui=italic ctermfg=22    ctermbg=NONE
 hi String           guifg=#cf3125  guibg=NONE     gui=none   ctermfg=124   ctermbg=NONE
