@@ -111,6 +111,8 @@ set display=lastline
 set autochdir         "working dir is based on file location
 set smoothscroll      "scroll by visual lines
 set title
+set cinoptions+=t0    "do not indent C function return type
+set cinoptions+=(0    "align with unclosed parentheses
 
 "Enable mode shapes, Cursor highlight group, and blinking
 :set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
