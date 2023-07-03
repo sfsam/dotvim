@@ -59,7 +59,7 @@ endif
 
 "------------------------------------
 
-colorscheme mowglii
+colorscheme habamax
 
 "Change cursor shape depending on mode
 "  1 -> blinking block
@@ -277,6 +277,12 @@ function! ToggleSpellCheck() abort
   endif
 endfunction
 nnoremap <silent> <Leader>S :call ToggleSpellCheck()<CR>
+
+"Get highlight group under cursor
+function! SynGroup()
+    let l:s = synID(line('.'), col('.'), 1)
+    echo synIDattr(l:s, 'name') . ' -> ' . synIDattr(synIDtrans(l:s), 'name')
+endfun
 
 "Statusline
 set stl=\ %-3.3n         "buffer number
