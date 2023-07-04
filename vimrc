@@ -59,7 +59,7 @@ endif
 
 "------------------------------------
 
-colorscheme habamax
+colorscheme my-habamax
 
 "Change cursor shape depending on mode
 "  1 -> blinking block
@@ -144,7 +144,7 @@ inoremap ,dd <C-R>=strftime('%Y-%m-%d')<CR>
 nnoremap <esc><esc> :noh<CR>
 
 "Shortcut to toggle color schemes
-nnoremap <expr> <leader>k ":colo ".(g:colors_name=='mowglii'?"habamax":"mowglii")."\<CR>"
+"nnoremap <expr> <leader>k ":colo ".(g:colors_name=='mowglii'?"my-habamax":"mowglii")."\<CR>"
 
 "Relative line numbers except in insert mode
 augroup numbertoggle
