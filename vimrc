@@ -121,6 +121,9 @@ set cinoptions+=(0    "align with unclosed parentheses
 
 let mapleader = " "
 
+map <ScrollWheelUp> <C-Y>
+map <ScrollWheelDown> <C-E>
+
 "j,k work by visual line unless provided with repeat count
 nnoremap <expr> j v:count ? 'j' : 'gj'
 nnoremap <expr> k v:count ? 'k' : 'gk'
