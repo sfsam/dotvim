@@ -15,7 +15,7 @@ let g:colors_name = 'habamax'
 let s:t_Co = exists('&t_Co') && !has('gui_running') ? (&t_Co ?? 0) : -1
 
 if (has('termguicolors') && &termguicolors) || has('gui_running')
-  let g:terminal_ansi_colors = ['#111111', '#d75f5f', '#87af87', '#afaf87', '#5f87af', '#af87af', '#5f8787', '#9e9e9e', '#767676', '#d7875f', '#afd7af', '#d7d787', '#87afd7', '#d7afd7', '#87afaf', '#bcbcbc']
+  let g:terminal_ansi_colors = ['#161616', '#d75f5f', '#87af87', '#afaf87', '#5f87af', '#af87af', '#5f8787', '#9e9e9e', '#767676', '#d7875f', '#afd7af', '#d7d787', '#87afd7', '#d7afd7', '#87afaf', '#bcbcbc']
 endif
 hi! link Twitter HighlightUrl
 hi! link Ticker String
@@ -69,8 +69,8 @@ hi ALEWarning guifg=#111111 guibg=#af87af gui=NONE cterm=NONE
 hi ALEVirtualTextWarning guifg=#111111 guibg=#af87af gui=NONE cterm=NONE
 hi ALEInfo guifg=#d7d787 guibg=NONE gui=NONE cterm=NONE
 hi ALEVirtualTextInfo guifg=#d7d787 guibg=NONE gui=NONE cterm=NONE
-hi Normal guifg=#bcbcbc guibg=#111111 gui=NONE cterm=NONE
-hi Statusline guifg=#111111 guibg=#9e9e9e gui=NONE cterm=NONE
+hi Normal guifg=#bcbcbc guibg=#161616 gui=NONE cterm=NONE
+hi Statusline guifg=#333333 guibg=#9e9e9e gui=bold cterm=NONE
 hi StatuslineNC guifg=#111111 guibg=#767676 gui=NONE cterm=NONE
 hi VertSplit guifg=#767676 guibg=#767676 gui=NONE cterm=NONE
 hi TabLine guifg=#111111 guibg=#767676 gui=NONE cterm=NONE
