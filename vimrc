@@ -1,4 +1,29 @@
-set nocompatible
+colorscheme habamax
+syntax on
+
+set undodir=~/.vim/undo
+set dir=~/.vim/swap//
+
+if !has('nvim')
+  set viminfo+=n~/.vim/viminfo
+
+  "Enable <esc> in kitty https://github.com/vim/vim/issues/11811
+  if !has('gui_running') && $TERM == 'xterm-kitty'
+    set keyprotocol=kitty:none
+    let &term=&term
+  endif
+endif
+
+"Change cursor shape depending on mode
+"  1 -> blinking block
+"  2 -> solid block
+"  3 -> blinking underscore
+"  4 -> solid underscore
+"  5 -> blinking vertical bar
+"  6 -> solid vertical bar
+let &t_SI.="\e[5 q" "SI = INSERT mode
+let &t_SR.="\e[3 q" "SR = REPLACE mode
+let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 
 " Allow backspacing over everything in insert mode.
 set backspace=indent,eol,start
@@ -45,45 +70,6 @@ endif
 " Also load indent files, to automatically do language-dependent indenting.
 " Revert with ":filetype off".
 filetype plugin indent on
-
-" Switch syntax highlighting on when the terminal has colors or when using the
-" GUI (which always has colors).
-if &t_Co > 2 || has("gui_running")
-  " Revert with ":syntax off".
-  syntax on
-
-  " I like highlighting strings inside C comments.
-  " Revert with ":unlet c_comment_strings".
-  let c_comment_strings=1
-endif
-
-"------------------------------------
-
-colorscheme my-habamax
-
-"Change cursor shape depending on mode
-"  1 -> blinking block
-"  2 -> solid block
-"  3 -> blinking underscore
-"  4 -> solid underscore
-"  5 -> blinking vertical bar
-"  6 -> solid vertical bar
-let &t_SI.="\e[5 q" "SI = INSERT mode
-let &t_SR.="\e[3 q" "SR = REPLACE mode
-let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
-
-if $TERM_PROGRAM ==# "iTerm.app"
-  "Use 24-bit color
-  let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
-  set termguicolors
-endif
-
-if !has("nvim")
-  set viminfo+=n~/.vim/viminfo
-endif
-set undodir=~/.vim/undo
-set dir=~/.vim/swap//
 
 set guifont=Source\ Code\ Pro:h14
 set go=
@@ -146,9 +132,6 @@ inoremap ,dd <C-R>=strftime('%Y-%m-%d')<CR>
 "Shortcut to clear search highlights
 nnoremap <esc><esc> :noh<CR>
 
-"Shortcut to toggle color schemes
-"nnoremap <expr> <leader>k ":colo ".(g:colors_name=='mowglii'?"my-habamax":"mowglii")."\<CR>"
-
 "Relative line numbers except in insert mode
 augroup numbertoggle
   autocmd!
@@ -167,26 +150,6 @@ augroup file_types
   autocmd FileType markdown setlocal ts=2 sts=2 sw=2
 augroup END
 
-"Shortcut to open terminal session in current working directory
-map <F6> :let $VIM_DIR=expand('%:p:h')<CR>:terminal<CR>cd $VIM_DIR<CR>
-
-"Define terminal colors for gvim
-let g:terminal_ansi_colors = [
-      \ '#000000', '#c03030',
-      \ '#00b000', '#a08020',
-      \ '#6090f0', '#e000e0',
-      \ '#00e0e0', '#e0e0e0',
-      \ '#808080', '#ff4040',
-      \ '#40ff40', '#ffff40',
-      \ '#4040ff', '#ff40ff',
-      \ '#40ffff', '#ffffff',
-      \]
-hi Terminal guifg=#dadada guibg=#222222 gui=none
-augroup terminal_colors
-    autocmd!
-    autocmd ColorScheme * :hi Terminal guifg=#dadada guibg=#222222 gui=none
-augroup END
-
 "Vertical split separator (Box Drawings Light Vertical)
 set fillchars+=vert:│
 
@@ -197,8 +160,8 @@ let g:better_whitespace_enabled = 0
 let g:bullets_outline_levels = ['ROM', 'ABC', 'num', 'abc', 'rom', 'std-']
 
 "URL styling for vim-highlighturl plugin
-let g:highlighturl_ctermfg = 26
-let g:highlighturl_guifg = "#116cd6"
+let g:highlighturl_ctermfg = 33
+let g:highlighturl_guifg = "#417bdf"
 let g:highlighturl_underline = 0
 
 "BufTabline
@@ -243,9 +206,9 @@ let g:ctrlp_user_command = 'find -L %s -type f'
 let g:ctrlp_follow_symlinks = 1
 let g:ctrlp_use_caching = 0
 let g:ctrlp_buffer_func = {
-            \ 'enter': 'MyCtrlPEnter',
-            \ 'exit':  'MyCtrlPExit'
-            \ }
+      \ 'enter': 'MyCtrlPEnter',
+      \ 'exit':  'MyCtrlPExit'
+      \ }
 function! MyCtrlPEnter() abort
   set cursorline
   set cursorlineopt=both
@@ -260,8 +223,8 @@ endfunction
 "  use markdown syntax highlighting for all files
 "  set tabstop to 2 spaces
 function! PseudoNotationalVelocity() abort
-    :CtrlP ~/Dropbox/Notes
-    :CtrlPClearCache
+  :CtrlP ~/Dropbox/Notes
+  :CtrlPClearCache
 endfunction
 nnoremap <C-l> :call PseudoNotationalVelocity()<CR>
 inoremap <C-l> <esc>:call PseudoNotationalVelocity()<return>
@@ -283,8 +246,8 @@ nnoremap <silent> <Leader>S :call ToggleSpellCheck()<CR>
 
 "Get highlight group under cursor
 function! SynGroup()
-    let l:s = synID(line('.'), col('.'), 1)
-    echo synIDattr(l:s, 'name') . ' -> ' . synIDattr(synIDtrans(l:s), 'name')
+  let l:s = synID(line('.'), col('.'), 1)
+  echo synIDattr(l:s, 'name') . ' -> ' . synIDattr(synIDtrans(l:s), 'name')
 endfun
 
 "Statusline
